@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative h-svh overflow-hidden bg-linear-to-b from-background via-background to-muted/20 pt-24 pb-8 md:pt-28 md:pb-10 flex items-center">
+    <section className="relative h-svh overflow-hidden bg-[#075056] pt-24 pb-8 md:pt-28 md:pb-10 flex items-center">
       {/* Ultra-thin decorative lines */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -24,24 +24,24 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-6 md:space-y-7 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background/50 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 backdrop-blur-sm">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-            <span className="text-sm font-medium text-foreground">
+            <span className="text-sm font-medium text-[#FFFFDE]">
               Digital Excellence • Rapid Delivery
             </span>
           </div>
 
           {/* Main heading - Ultra thin, bold font weight */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-foreground"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE]"
             style={{ letterSpacing: "-0.05em" }}
           >
             Elevate Your
-            <span className="block text-accent">Digital Presence</span>
+            <span className="block text-[#E26128]">Digital Presence</span>
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed text-balance">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-[#FFFFDE] leading-relaxed text-balance">
             Expert web development, stunning design, and strategic digital
             marketing. We deliver excellence at speed. That&apos;s the
             Marketspot difference.
@@ -59,7 +59,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="h-12 w-full sm:w-auto px-8 rounded-full border-border hover:bg-muted/50"
+              className="h-12 w-full sm:w-auto px-8 rounded-full border-[#FFFFDE]/55 bg-transparent text-[#FFFFDE] hover:bg-[#FFFFDE]/10 hover:text-[#FFFFDE]"
             >
               View Our Work
             </Button>
