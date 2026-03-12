@@ -42,7 +42,7 @@ export function Team() {
     <section id="team" className="py-20 md:py-32 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
             Meet the Team
           </span>
@@ -59,7 +59,8 @@ export function Team() {
           {teamMembers.map((member, index) => (
             <article
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-background border border-border hover:border-secondary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-2xl bg-background border border-border hover:border-secondary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-up"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               {/* Top accent bar */}
               <div className="h-1 w-full bg-linear-to-r from-accent via-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

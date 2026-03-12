@@ -56,7 +56,7 @@ export function Portfolio() {
     <section id="portfolio" className="py-20 md:py-32 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             Our Work
           </span>
@@ -77,7 +77,8 @@ export function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover:border-accent/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              className="group relative flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover:border-accent/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-fade-up"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               {/* Colour band */}
               <div className={`h-2 w-full bg-linear-to-r ${project.accent}`} />

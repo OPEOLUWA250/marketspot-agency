@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-4">
-      <nav className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between rounded-2xl border border-border/70 bg-background/85 backdrop-blur-md shadow-sm">
+      <nav className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between rounded-2xl border border-border/70 bg-background/85 backdrop-blur-md shadow-sm animate-fade-in">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
@@ -67,7 +67,7 @@ export function Header() {
 
       {/* Mobile navigation */}
       {isOpen && (
-        <div className="md:hidden w-[90%] mx-auto mt-2 rounded-2xl border border-border/70 bg-background/95 backdrop-blur-md shadow-sm">
+        <div className="md:hidden w-[90%] mx-auto mt-2 rounded-2xl border border-border/70 bg-background/95 backdrop-blur-md shadow-sm animate-fade-up">
           <div className="flex flex-col p-4 space-y-3">
             {navItems.map((item) => (
               <a

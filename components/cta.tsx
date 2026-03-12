@@ -20,18 +20,25 @@ export function CTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance mb-6 animate-fade-up"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Ready to elevate your <span className="text-[#E26128]">digital presence</span>?
+            Ready to elevate your{" "}
+            <span className="text-[#E26128]">digital presence</span>?
           </h2>
 
-          <p className="text-lg text-[#FFFFDE] mb-8 text-balance">
+          <p
+            className="text-lg text-[#FFFFDE] mb-8 text-balance animate-fade-up"
+            style={{ animationDelay: "0.1s" }}
+          >
             Let&apos;s discuss your project and create something extraordinary
             together.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
+            style={{ animationDelay: "0.18s" }}
+          >
             <Button
               size="lg"
               className="h-12 px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all group"
@@ -49,10 +56,11 @@ export function CTA() {
           </div>
 
           {/* Contact info */}
-          <div className="mt-12 pt-8 border-t border-[#FFFFDE]/30">
-            <p className="text-sm text-[#FFFFDE] mb-4">
-              Or reach out directly
-            </p>
+          <div
+            className="mt-12 pt-8 border-t border-[#FFFFDE]/30 animate-fade-up"
+            style={{ animationDelay: "0.26s" }}
+          >
+            <p className="text-sm text-[#FFFFDE] mb-4">Or reach out directly</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <a
                 href="mailto:opeoluwadejumos@gmail.com"

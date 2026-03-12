@@ -37,7 +37,7 @@ export function Services() {
     <section id="services" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             Our Expertise
           </span>
@@ -56,7 +56,8 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
+                className="group relative p-8 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 animate-fade-up"
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {/* Accent line on top */}
                 <div className="absolute top-0 left-0 h-1 w-0 bg-accent rounded-full group-hover:w-12 transition-all duration-300"></div>
@@ -81,7 +82,7 @@ export function Services() {
                       key={i}
                       className="text-sm text-foreground flex items-center gap-2"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
                       {highlight}
                     </li>
                   ))}

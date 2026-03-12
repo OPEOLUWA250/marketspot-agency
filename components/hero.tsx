@@ -21,10 +21,13 @@ export function Hero() {
         ></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-6 md:space-y-7 text-center">
+      <div className="relative w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="space-y-6 md:space-y-7 text-center max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 backdrop-blur-sm">
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 backdrop-blur-sm animate-fade-up"
+            style={{ animationDelay: "0.05s" }}
+          >
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
             <span className="text-sm font-medium text-[#FFFFDE]">
               Digital Excellence • Rapid Delivery
@@ -33,22 +36,28 @@ export function Hero() {
 
           {/* Main heading - Ultra thin, bold font weight */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE]"
-            style={{ letterSpacing: "-0.05em" }}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
+            style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
             Elevate Your
             <span className="block text-[#E26128]">Digital Presence</span>
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-[#FFFFDE] leading-relaxed text-balance">
+          <p
+            className="max-w-3xl mx-auto text-lg md:text-xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             Expert web development, stunning design, and strategic digital
             marketing. We deliver excellence at speed. That&apos;s the
             Marketspot difference.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full max-w-sm mx-auto sm:max-w-none">
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full max-w-sm mx-auto sm:max-w-none animate-fade-up"
+            style={{ animationDelay: "0.28s" }}
+          >
             <Button
               size="lg"
               className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all"

@@ -23,7 +23,7 @@ export function Footer() {
     <footer className="bg-foreground text-background mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-          <div className="space-y-5">
+          <div className="space-y-5 animate-fade-up">
             <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           {footerSections.map((section) => (
-            <div key={section.title} className="space-y-4">
+            <div key={section.title} className="space-y-4 animate-fade-up">
               <h3 className="font-semibold text-sm tracking-wide uppercase text-background/90">
                 {section.title}
               </h3>
@@ -79,7 +79,7 @@ export function Footer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 border-t border-background/20">
-          <div className="flex gap-3">
+          <div className="flex gap-3 animate-fade-up">
             <Mail className="w-5 h-5 text-background/80 shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-background/60 uppercase tracking-wide">
@@ -93,7 +93,10 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div
+            className="flex gap-3 animate-fade-up"
+            style={{ animationDelay: "0.08s" }}
+          >
             <Phone className="w-5 h-5 text-background/80 shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-background/60 uppercase tracking-wide">
@@ -107,7 +110,10 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div
+            className="flex gap-3 animate-fade-up"
+            style={{ animationDelay: "0.16s" }}
+          >
             <MapPin className="w-5 h-5 text-background/80 shrink-0 mt-0.5" />
             <div>
               <p className="text-xs text-background/60 uppercase tracking-wide">
