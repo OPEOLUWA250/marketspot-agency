@@ -1,0 +1,71 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+export function Hero() {
+  return (
+    <section className="relative h-svh overflow-hidden bg-linear-to-b from-background via-background to-muted/20 pt-24 pb-8 md:pt-28 md:pb-10 flex items-center">
+      {/* Ultra-thin decorative lines */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute top-20 right-10 w-64 h-64 rounded-full opacity-5 blur-3xl"
+          style={{
+            background: "radial-gradient(circle, var(--accent), transparent)",
+          }}
+        ></div>
+        <div
+          className="absolute bottom-20 left-10 w-96 h-96 rounded-full opacity-5 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, var(--secondary), transparent)",
+          }}
+        ></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-6 md:space-y-7 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background/50 backdrop-blur-sm">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+            <span className="text-sm font-medium text-foreground">
+              Digital Excellence • Rapid Delivery
+            </span>
+          </div>
+
+          {/* Main heading - Ultra thin, bold font weight */}
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-foreground"
+            style={{ letterSpacing: "-0.05em" }}
+          >
+            Elevate Your
+            <span className="block text-accent">Digital Presence</span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed text-balance">
+            Expert web development, stunning design, and strategic digital
+            marketing. We deliver excellence at speed. That&apos;s the
+            Marketspot difference.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full max-w-sm mx-auto sm:max-w-none">
+            <Button
+              size="lg"
+              className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all"
+            >
+              Start Your Project
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-12 w-full sm:w-auto px-8 rounded-full border-border hover:bg-muted/50"
+            >
+              View Our Work
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
