@@ -4,15 +4,19 @@ import { Mail, MapPin, Phone, Linkedin, Twitter, Github } from "lucide-react";
 const footerSections = [
   {
     title: "Services",
-    links: ["Web Development", "Design", "Digital Marketing", "Consulting"],
+    links: [
+      "Marketing and content strategy",
+      "Graphics Design",
+      "Web development",
+    ],
   },
   {
     title: "Company",
-    links: ["About Us", "Contact"],
+    links: ["Team", "Our Work", "Contact"],
   },
   {
     title: "Resources",
-    links: ["Pricing", "FAQ"],
+    links: ["Digital Presence Audit", "FAQ"],
   },
 ];
 
@@ -20,7 +24,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background mt-20">
+    <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div className="space-y-5 animate-fade-up">
@@ -35,7 +39,9 @@ export function Footer() {
               <span className="text-lg font-bold">Marketspot</span>
             </div>
             <p className="text-sm text-background/80 leading-relaxed">
-              Elevating digital presence with excellence and speed.
+              We help small to mid-size businesses attract, nurture and convert
+              their right audience through digital strategies most valuable to
+              them.
             </p>
             <div className="flex gap-3">
               {[

@@ -2,32 +2,32 @@ import { Code2, Palette, TrendingUp } from "lucide-react";
 
 const services = [
   {
-    icon: Code2,
-    title: "Web Development",
+    icon: TrendingUp,
+    title: "Marketing and content strategy",
     description:
-      "Custom, scalable web applications built with modern technologies. Fast, secure, and designed for conversion.",
+      "Marketing strategies that help your audience find you easily.",
     highlights: [
-      "React & Next.js",
-      "Full-stack Development",
-      "E-commerce Solutions",
+      "SEO Optimization",
+      "Social Media Strategy",
+      "Growth Marketing",
     ],
   },
   {
     icon: Palette,
     title: "Graphics Design",
     description:
-      "Stunning visual identities and compelling designs. From branding to marketing materials, we create impact.",
+      "Brand designs that help your business stand out in the market.",
     highlights: ["Brand Identity", "UI/UX Design", "Visual Strategy"],
   },
   {
-    icon: TrendingUp,
-    title: "Digital Marketing",
+    icon: Code2,
+    title: "Web development",
     description:
-      "Data-driven marketing strategies to boost your visibility, engagement, and ROI across all channels.",
+      "Custom websites built with modern tech designed to help your business be seen easily on the internet.",
     highlights: [
-      "SEO Optimization",
-      "Social Media Strategy",
-      "Growth Marketing",
+      "Performance-first Websites",
+      "Full-stack Development",
+      "E-commerce Solutions",
     ],
   },
 ];

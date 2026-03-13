@@ -39,8 +39,8 @@ export function Hero() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Elevate Your
-            <span className="block text-[#E26128]">Digital Presence</span>
+            Making businesses seen
+            <span className="block text-[#E26128]">where it matters</span>
           </h1>
 
           {/* Subheading */}
@@ -48,9 +48,9 @@ export function Hero() {
             className="max-w-3xl mx-auto text-lg md:text-xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Expert web development, stunning design, and strategic digital
-            marketing. We deliver excellence at speed. That&apos;s the
-            Marketspot difference.
+            We help Small to mid-size businesses attract, nurture and convert
+            their right audience through digital strategies most valuable to
+            them.
           </p>
 
           {/* CTA Buttons */}

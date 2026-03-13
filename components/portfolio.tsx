@@ -1,62 +1,165 @@
 import { ArrowUpRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-const projects = [
+const graphicsProjects = [
   {
-    title: "Brand Identity & Web Presence",
-    category: "Web Development · Branding",
-    description:
-      "Full brand overhaul and responsive website for a Lagos-based fashion label. Resulted in 3× increase in online enquiries within 60 days.",
-    tags: ["Next.js", "Brand Design", "SEO"],
-    accent: "from-accent/20 to-secondary/10",
-  },
-  {
-    title: "Social Growth Campaign",
-    category: "Digital Marketing",
-    description:
-      "Organic growth strategy for a fintech startup — content calendar, copy, and paid ads that drove 12k new followers and a 40% lift in sign-ups.",
-    tags: ["Social Media", "Paid Ads", "Copywriting"],
-    accent: "from-secondary/15 to-accent/5",
-  },
-  {
-    title: "E-commerce Launch",
-    category: "Web Development · Marketing",
-    description:
-      "End-to-end e-commerce build and launch strategy for a Nigerian beauty brand — from storefront design to first-month sales campaign.",
-    tags: ["E-commerce", "UI/UX", "Growth Marketing"],
-    accent: "from-accent/10 to-muted/30",
-  },
-  {
-    title: "Visual Identity System",
+    title: "Marketspot Brand Launch Kit",
     category: "Graphics Design",
     description:
-      "Cohesive visual identity — logo, colour palette, typography, and brand guidelines — for a professional services firm entering a competitive market.",
-    tags: ["Logo Design", "Brand Guidelines", "Print"],
-    accent: "from-secondary/20 to-accent/10",
+      "Complete visual identity system with logo suite, social templates, and campaign graphics for a modern service business.",
+    tags: ["Brand Identity", "Visual Strategy", "Campaign Assets"],
+    accent: "from-primary/25 to-secondary/10",
   },
   {
-    title: "SEO & Content Strategy",
-    category: "Digital Marketing · SEO",
+    title: "Hospitality Rebrand Campaign",
+    category: "Graphics Design",
     description:
-      "Six-month SEO and content programme that pushed a local business from page 5 to position 3 on Google for its primary search terms.",
-    tags: ["SEO", "Content Marketing", "Analytics"],
-    accent: "from-accent/15 to-secondary/5",
+      "Refreshed an existing hospitality brand with a bold visual direction that improved recall across digital and print touchpoints.",
+    tags: ["Brand Refresh", "Print Design", "Social Design"],
+    accent: "from-secondary/20 to-primary/10",
   },
   {
-    title: "Product Landing Page",
-    category: "Web Development · Design",
+    title: "Product Story Visuals",
+    category: "Graphics Design",
     description:
-      "High-converting product landing page with micro-animations and optimised copy, achieving a 28% conversion rate on launch week.",
-    tags: ["Landing Page", "Conversion", "Animation"],
-    accent: "from-muted/40 to-accent/10",
+      "Built a conversion-ready creative system for product storytelling, from ad creatives to launch visuals.",
+    tags: ["Creative Direction", "Ad Creatives", "Content Design"],
+    accent: "from-primary/20 to-muted/40",
+  },
+  {
+    title: "Corporate Identity Suite",
+    category: "Graphics Design",
+    description:
+      "Designed a full corporate identity package that helped a professional services firm stand out in a crowded market.",
+    tags: ["Identity Suite", "Presentation Design", "Brand Guidelines"],
+    accent: "from-secondary/25 to-primary/10",
   },
 ];
+
+const webProjects = [
+  {
+    title: "High-Converting Service Website",
+    category: "Web development",
+    description:
+      "Custom marketing website with clear conversion paths and strong technical performance for search visibility.",
+    tags: ["Performance-first Websites", "SEO Setup", "Conversion"],
+    accent: "from-primary/20 to-secondary/10",
+  },
+  {
+    title: "Business Operations Portal",
+    category: "Web development",
+    description:
+      "Full-stack dashboard for internal operations, streamlining team workflows and reporting in one platform.",
+    tags: ["Full-stack Development", "Dashboard", "Automation"],
+    accent: "from-secondary/20 to-primary/8",
+  },
+  {
+    title: "E-commerce Growth Storefront",
+    category: "Web development",
+    description:
+      "Built an e-commerce storefront with optimized product pages and checkout flow designed to improve sales completion.",
+    tags: ["E-commerce Solutions", "UX Optimization", "Scalability"],
+    accent: "from-primary/15 to-muted/40",
+  },
+  {
+    title: "Lead Capture Landing System",
+    category: "Web development",
+    description:
+      "Multi-page lead generation experience with analytics hooks and fast load times for better campaign outcomes.",
+    tags: ["Landing Pages", "Analytics", "Technical SEO"],
+    accent: "from-secondary/20 to-primary/12",
+  },
+];
+
+type WorkItem = {
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  accent: string;
+};
+
+function WorkCarousel({
+  title,
+  subtitle,
+  projects,
+}: {
+  title: string;
+  subtitle: string;
+  projects: WorkItem[];
+}) {
+  return (
+    <div className="animate-fade-up">
+      <div className="mb-6 flex items-end justify-between gap-4">
+        <div>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{title}</h3>
+          <p className="mt-2 text-sm md:text-base text-muted-foreground">{subtitle}</p>
+        </div>
+      </div>
+
+      <Carousel
+        opts={{ align: "start", loop: true }}
+        className="relative"
+        aria-label={`${title} carousel`}
+      >
+        <CarouselContent>
+          {projects.map((project, index) => (
+            <CarouselItem
+              key={`${project.title}-${index}`}
+              className="md:basis-1/2 lg:basis-1/3"
+            >
+              <article className="group h-full rounded-2xl border border-border bg-background overflow-hidden transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg">
+                <div className={`h-2 w-full bg-linear-to-r ${project.accent}`} />
+
+                <div className="flex h-full flex-col p-6">
+                  <div className="mb-3 flex items-start justify-between">
+                    <span className="text-xs font-medium uppercase tracking-wide text-primary/85">
+                      {project.category}
+                    </span>
+                    <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                  </div>
+
+                  <h4 className="mb-3 text-lg font-bold leading-snug text-foreground">
+                    {project.title}
+                  </h4>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+
+        <CarouselPrevious className="hidden md:flex -left-4 border-border bg-background text-foreground hover:bg-muted" />
+        <CarouselNext className="hidden md:flex -right-4 border-border bg-background text-foreground hover:bg-muted" />
+      </Carousel>
+    </div>
+  );
+}
 
 export function Portfolio() {
   return (
     <section id="portfolio" className="py-20 md:py-32 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl mb-16 animate-fade-up">
+        <div className="max-w-3xl mb-14 animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             Our Work
           </span>
@@ -64,55 +167,26 @@ export function Portfolio() {
             className="text-4xl md:text-5xl font-bold text-foreground text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Results we&apos;re proud of
+            Focused portfolios, faster browsing
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            A selection of projects across web development, design, and digital
-            marketing that delivered measurable impact.
+            Explore selected projects by category without scrolling through a
+            long page.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover:border-accent/50 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-fade-up"
-              style={{ animationDelay: `${index * 0.08}s` }}
-            >
-              {/* Colour band */}
-              <div className={`h-2 w-full bg-linear-to-r ${project.accent}`} />
+        <div className="space-y-14">
+          <WorkCarousel
+            title="Graphics Design"
+            subtitle="Brand design projects that help businesses stand out in the market."
+            projects={graphicsProjects}
+          />
 
-              {/* Body */}
-              <div className="flex flex-col flex-1 p-7">
-                <div className="flex items-start justify-between mb-3">
-                  <span className="text-xs font-medium text-accent/80 tracking-wide uppercase">
-                    {project.category}
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-0.5" />
-                </div>
-
-                <h3 className="text-lg font-bold text-foreground mb-3 leading-snug">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+          <WorkCarousel
+            title="Web development"
+            subtitle="Modern websites and products built to make businesses easier to find online."
+            projects={webProjects}
+          />
         </div>
       </div>
     </section>

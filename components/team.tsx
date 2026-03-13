@@ -1,39 +1,30 @@
 import Image from "next/image";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
     name: "Fola Afolabi",
     role: "Founder",
-    specialty: "Digital Marketer",
-    bio: "Growth-focused digital marketer who helps brands turn attention into loyal communities, qualified leads, and measurable revenue.",
+    specialty: "Marketing & Growth Strategist",
+    bio: "Growth-focused marketer who helps businesses build audiences that convert. 8 businesses helped across 5 countries so far.",
     image: "/opeHS%20.jpg",
-    socials: [
-      { icon: Linkedin, label: "LinkedIn" },
-      { icon: Mail, label: "Email" },
-    ],
+    linkedin: "https://www.linkedin.com/in/fola-afolabi-74698426a/",
   },
   {
-    name: "Oyebamiji Joseph",
+    name: "Joseph Oyebamiji",
     role: "Co-founder",
-    specialty: "Creative Director",
-    bio: "Creative director shaping brand stories into memorable visuals and campaigns that connect quickly and leave lasting impressions.",
+    specialty: "Branding & Creative Lead",
+    bio: "Helping businesses stand out through design and creative strategy. Over 50+ brands built.",
     image: "/opeHS%20.jpg",
-    socials: [
-      { icon: Github, label: "GitHub" },
-      { icon: Linkedin, label: "LinkedIn" },
-    ],
+    linkedin: "https://www.linkedin.com/in/josephoyebamijijd/",
   },
   {
     name: "Adejumo Opeoluwa",
-    role: "Co-Founder",
-    specialty: "Head of Operations",
-    bio: "Operations lead focused on smooth delivery, clear process ownership, and turning strategy into consistent day-to-day execution.",
+    role: "Co-founder",
+    specialty: "Tech and Operations Lead",
+    bio: "Web developer who helps businesses get noticed on the internet and project manager who turns ideas into reality in time. Over 20 brands worked with.",
     image: "/opeHS%20.jpg",
-    socials: [
-      { icon: Linkedin, label: "LinkedIn" },
-      { icon: Mail, label: "Email" },
-    ],
+    linkedin: "https://www.linkedin.com/in/opeoluwa-adejumo/",
   },
 ];
 
@@ -95,18 +86,15 @@ export function Team() {
 
                 {/* Social links */}
                 <div className="flex gap-3">
-                  {member.socials.map((social, i) => {
-                    const Icon = social.icon;
-                    return (
-                      <button
-                        key={i}
-                        className="w-9 h-9 rounded-lg bg-muted hover:bg-accent/20 text-foreground hover:text-accent transition-all flex items-center justify-center"
-                        aria-label={social.label}
-                      >
-                        <Icon className="w-4 h-4" />
-                      </button>
-                    );
-                  })}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-9 h-9 rounded-lg bg-muted hover:bg-accent/20 text-foreground hover:text-accent transition-all flex items-center justify-center"
+                    aria-label={`${member.name} LinkedIn`}
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </article>

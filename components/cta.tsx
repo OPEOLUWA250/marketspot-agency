@@ -23,17 +23,9 @@ export function CTA() {
             className="text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance mb-6 animate-fade-up"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Ready to elevate your{" "}
-            <span className="text-[#E26128]">digital presence</span>?
+            Ready to get your business seen by your{" "}
+            <span className="text-[#E26128]">target audience</span>?
           </h2>
-
-          <p
-            className="text-lg text-[#FFFFDE] mb-8 text-balance animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Let&apos;s discuss your project and create something extraordinary
-            together.
-          </p>
 
           <div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
@@ -41,17 +33,10 @@ export function CTA() {
           >
             <Button
               size="lg"
-              className="h-12 px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all group"
+              className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all group"
             >
-              Schedule a Call
+              Request a custom digital presence audit
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-12 px-8 rounded-full border-[#FFFFDE]/55 bg-transparent text-[#FFFFDE] hover:bg-[#FFFFDE]/10 hover:text-[#FFFFDE]"
-            >
-              Get a Free Quote
             </Button>
           </div>
 

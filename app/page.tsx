@@ -5,10 +5,11 @@ import { Team } from "@/components/team";
 import { Portfolio } from "@/components/portfolio";
 import { CTA } from "@/components/cta";
 import { Footer } from "@/components/footer";
+import { BackToTop } from "@/components/back-to-top";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background overflow-hidden">
+    <main id="top" className="min-h-screen bg-background overflow-hidden">
       <Header />
 
       <Hero />
@@ -18,6 +19,7 @@ export default function Home() {
       <CTA />
 
       <Footer />
+      <BackToTop />
     </main>
   );
 }
