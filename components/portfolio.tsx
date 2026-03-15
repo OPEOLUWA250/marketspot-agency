@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import {
   Carousel,
@@ -5,6 +9,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 const graphicsProjects = [
@@ -15,6 +20,7 @@ const graphicsProjects = [
       "Complete visual identity system with logo suite, social templates, and campaign graphics for a modern service business.",
     tags: ["Brand Identity", "Visual Strategy", "Campaign Assets"],
     accent: "from-primary/25 to-secondary/10",
+    image: "/opeHS .jpg",
   },
   {
     title: "Hospitality Rebrand Campaign",
@@ -23,6 +29,7 @@ const graphicsProjects = [
       "Refreshed an existing hospitality brand with a bold visual direction that improved recall across digital and print touchpoints.",
     tags: ["Brand Refresh", "Print Design", "Social Design"],
     accent: "from-secondary/20 to-primary/10",
+    image: "/opeHS .jpg",
   },
   {
     title: "Product Story Visuals",
@@ -31,6 +38,7 @@ const graphicsProjects = [
       "Built a conversion-ready creative system for product storytelling, from ad creatives to launch visuals.",
     tags: ["Creative Direction", "Ad Creatives", "Content Design"],
     accent: "from-primary/20 to-muted/40",
+    image: "/opeHS .jpg",
   },
   {
     title: "Corporate Identity Suite",
@@ -39,41 +47,40 @@ const graphicsProjects = [
       "Designed a full corporate identity package that helped a professional services firm stand out in a crowded market.",
     tags: ["Identity Suite", "Presentation Design", "Brand Guidelines"],
     accent: "from-secondary/25 to-primary/10",
+    image: "/opeHS .jpg",
   },
 ];
 
 const webProjects = [
   {
-    title: "High-Converting Service Website",
+    title: "Ecoclimate Foundation",
     category: "Web development",
     description:
-      "Custom marketing website with clear conversion paths and strong technical performance for search visibility.",
-    tags: ["Performance-first Websites", "SEO Setup", "Conversion"],
+      "Sustainable environmental organization website showcasing climate action initiatives and community engagement programs.",
+    tags: ["Environmental Focus", "Community Impact", "Web Design"],
     accent: "from-primary/20 to-secondary/10",
+    image: "/web-dev/ecoclimate.png",
+    link: "https://www.ecoclimatefoundation.org/",
   },
   {
-    title: "Business Operations Portal",
+    title: "Seaventures",
     category: "Web development",
     description:
-      "Full-stack dashboard for internal operations, streamlining team workflows and reporting in one platform.",
-    tags: ["Full-stack Development", "Dashboard", "Automation"],
+      "Marine adventure tourism platform connecting travelers with unforgettable ocean experiences and sustainable travel opportunities.",
+    tags: ["Travel & Tourism", "User Experience", "Bookings"],
     accent: "from-secondary/20 to-primary/8",
+    image: "/web-dev/seaventures.png",
+    link: "https://seaventureskenya.com/",
   },
   {
-    title: "E-commerce Growth Storefront",
+    title: "Ambani Fish Leather",
     category: "Web development",
     description:
-      "Built an e-commerce storefront with optimized product pages and checkout flow designed to improve sales completion.",
-    tags: ["E-commerce Solutions", "UX Optimization", "Scalability"],
+      "Innovative sustainable leather products showcase with e-commerce integration for eco-conscious fashion and design enthusiasts.",
+    tags: ["Sustainability", "E-commerce", "Product Showcase"],
     accent: "from-primary/15 to-muted/40",
-  },
-  {
-    title: "Lead Capture Landing System",
-    category: "Web development",
-    description:
-      "Multi-page lead generation experience with analytics hooks and fast load times for better campaign outcomes.",
-    tags: ["Landing Pages", "Analytics", "Technical SEO"],
-    accent: "from-secondary/20 to-primary/12",
+    image: "/web-dev/afl.png",
+    link: "https://afl.co.ke/",
   },
 ];
 
@@ -83,6 +90,8 @@ type WorkItem = {
   description: string;
   tags: string[];
   accent: string;
+  image: string;
+  link?: string;
 };
 
 function WorkCarousel({
@@ -94,18 +103,70 @@ function WorkCarousel({
   subtitle: string;
   projects: WorkItem[];
 }) {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!api) return;
+
+    const autoplay = () => {
+      if (api) {
+        api.scrollNext();
+      }
+    };
+
+    const startAutoplay = () => {
+      autoplayRef.current = setInterval(autoplay, 4000);
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayRef.current) {
+        clearInterval(autoplayRef.current);
+      }
+    };
+
+    startAutoplay();
+
+    // Stop on hover
+    const carouselElement = document.querySelector(
+      `[aria-label="${title} carousel"]`,
+    );
+    if (carouselElement) {
+      carouselElement.addEventListener("mouseenter", stopAutoplay);
+      carouselElement.addEventListener("mouseleave", startAutoplay);
+      carouselElement.addEventListener("touchstart", stopAutoplay);
+      carouselElement.addEventListener("touchend", startAutoplay);
+
+      return () => {
+        carouselElement.removeEventListener("mouseenter", stopAutoplay);
+        carouselElement.removeEventListener("mouseleave", startAutoplay);
+        carouselElement.removeEventListener("touchstart", stopAutoplay);
+        carouselElement.removeEventListener("touchend", startAutoplay);
+        stopAutoplay();
+      };
+    }
+
+    return () => stopAutoplay();
+  }, [api, title]);
+
   return (
     <div className="animate-fade-up">
-      <div className="mb-6 flex items-end justify-between gap-4">
+      <div className="mb-8 flex items-end justify-between gap-4">
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{title}</h3>
-          <p className="mt-2 text-sm md:text-base text-muted-foreground">{subtitle}</p>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+            {title}
+          </h3>
+          <p className="mt-2 text-sm md:text-base text-muted-foreground">
+            {subtitle}
+          </p>
         </div>
       </div>
 
       <Carousel
         opts={{ align: "start", loop: true }}
-        className="relative"
+        setApi={setApi}
+        className="relative group"
         aria-label={`${title} carousel`}
       >
         <CarouselContent>
@@ -114,42 +175,110 @@ function WorkCarousel({
               key={`${project.title}-${index}`}
               className="md:basis-1/2 lg:basis-1/3"
             >
-              <article className="group h-full rounded-2xl border border-border bg-background overflow-hidden transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-lg">
-                <div className={`h-2 w-full bg-linear-to-r ${project.accent}`} />
+              {project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  <article className="group flex h-full flex-col rounded-2xl border border-border/50 bg-background overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl hover:border-primary/40 hover:-translate-y-2 cursor-pointer">
+                    {/* Image section - premium focal point */}
+                    <div className="relative w-full overflow-hidden bg-muted h-64 md:h-72">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                        priority={index === 0}
+                      />
+                    </div>
 
-                <div className="flex h-full flex-col p-6">
-                  <div className="mb-3 flex items-start justify-between">
-                    <span className="text-xs font-medium uppercase tracking-wide text-primary/85">
-                      {project.category}
-                    </span>
-                    <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                    {/* Content section - clean and separate */}
+                    <div className="flex flex-col flex-1 p-5 md:p-6">
+                      {/* Category badge */}
+                      <div className="mb-3 flex items-center justify-between">
+                        <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                          {project.category}
+                        </span>
+                        <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:text-primary" />
+                      </div>
+
+                      {/* Title */}
+                      <h4 className="mb-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                        {project.title}
+                      </h4>
+
+                      {/* Description */}
+                      <p className="flex-1 mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                        {project.description}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.slice(0, 2).map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              ) : (
+                <article className="group flex h-full flex-col rounded-2xl border border-border/50 bg-background overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl hover:border-primary/40 hover:-translate-y-2">
+                  {/* Image section - premium focal point */}
+                  <div className="relative w-full overflow-hidden bg-muted h-64 md:h-72">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                      priority={index === 0}
+                    />
                   </div>
 
-                  <h4 className="mb-3 text-lg font-bold leading-snug text-foreground">
-                    {project.title}
-                  </h4>
-                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {project.description}
-                  </p>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary"
-                      >
-                        {tag}
+                  {/* Content section - clean and separate */}
+                  <div className="flex flex-col flex-1 p-5 md:p-6">
+                    {/* Category badge */}
+                    <div className="mb-3 flex items-center justify-between">
+                      <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                        {project.category}
                       </span>
-                    ))}
+                      <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:text-primary" />
+                    </div>
+
+                    {/* Title */}
+                    <h4 className="mb-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                      {project.title}
+                    </h4>
+
+                    {/* Description */}
+                    <p className="flex-1 mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              )}
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        <CarouselPrevious className="hidden md:flex -left-4 border-border bg-background text-foreground hover:bg-muted" />
-        <CarouselNext className="hidden md:flex -right-4 border-border bg-background text-foreground hover:bg-muted" />
+        {/* Navigation - visible on hover on desktop & mobile */}
+        <CarouselPrevious className="md:flex md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:-translate-x-16 md:z-50 h-10 w-10 md:h-11 md:w-11 rounded-full border-0 bg-primary/90 text-primary-foreground md:opacity-0 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:-translate-x-14 hover:bg-primary shadow-lg" />
+        <CarouselNext className="md:flex md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-16 md:z-50 h-10 w-10 md:h-11 md:w-11 rounded-full border-0 bg-primary/90 text-primary-foreground md:opacity-0 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:translate-x-14 hover:bg-primary shadow-lg" />
       </Carousel>
     </div>
   );

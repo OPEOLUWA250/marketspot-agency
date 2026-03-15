@@ -7,7 +7,7 @@ const teamMembers = [
     role: "Founder",
     specialty: "Marketing & Growth Strategist",
     bio: "Growth-focused marketer who helps businesses build audiences that convert. 8 businesses helped across 5 countries so far.",
-    image: "/opeHS%20.jpg",
+    image: "/afollyHS.jpeg",
     linkedin: "https://www.linkedin.com/in/fola-afolabi-74698426a/",
   },
   {
@@ -15,7 +15,7 @@ const teamMembers = [
     role: "Co-founder",
     specialty: "Branding & Creative Lead",
     bio: "Helping businesses stand out through design and creative strategy. Over 50+ brands built.",
-    image: "/opeHS%20.jpg",
+    image: "/jdHS.png",
     linkedin: "https://www.linkedin.com/in/josephoyebamijijd/",
   },
   {
@@ -23,7 +23,7 @@ const teamMembers = [
     role: "Co-founder",
     specialty: "Tech and Operations Lead",
     bio: "Web developer who helps businesses get noticed on the internet and project manager who turns ideas into reality in time. Over 20 brands worked with.",
-    image: "/opeHS%20.jpg",
+    image: "/opeHS .jpg",
     linkedin: "https://www.linkedin.com/in/opeoluwa-adejumo/",
   },
 ];
