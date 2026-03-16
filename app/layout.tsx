@@ -8,7 +8,9 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["600"] });
 export const metadata: Metadata = {
   title: "Marketspot Agency | Digital Excellence & Speed",
   description:
-    "Elevate your digital presence with expert web development, graphics design, and digital marketing services. Excellence and speed, guaranteed.",
+    "Award-winning digital marketing agency specializing in web development, graphics design, branding, and digital strategy. We help SMBs attract and convert their ideal customers with excellence and speed.",
+  keywords:
+    "digital marketing, web development, graphics design, branding, digital strategy, SMB marketing, digital agency Kenya",
   generator: "Marketspot Agency",
   viewport: {
     width: "device-width",
@@ -23,6 +25,24 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
+  },
+  openGraph: {
+    title: "Marketspot Agency - Digital Excellence & Speed",
+    description:
+      "Expert digital marketing, web development, and graphics design services for SMBs. We deliver excellence and speed.",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketspot Agency",
+      },
+    ],
+  },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://marketspot.agency",
   },
 };
 

@@ -7,8 +7,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 
@@ -67,7 +65,7 @@ const webProjects = [
     category: "Web development",
     description:
       "Marine adventure tourism platform connecting travelers with unforgettable ocean experiences and sustainable travel opportunities.",
-    tags: ["Travel & Tourism", "User Experience", "Bookings"],
+    tags: ["Marine Adventures", "User Experience", "Bookings"],
     accent: "from-secondary/20 to-primary/8",
     image: "/web-dev/seaventures.png",
     link: "https://seaventureskenya.com/",
@@ -176,32 +174,36 @@ function WorkCarousel({
               className="md:basis-1/2 lg:basis-1/3"
             >
               {project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
-                  <article className="group flex h-full flex-col rounded-2xl border border-border/50 bg-background overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl hover:border-primary/40 hover:-translate-y-2 cursor-pointer">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <article className="group flex h-full flex-col rounded-2xl border border-primary/20 bg-linear-to-br from-background to-muted/50 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/60 hover:-translate-y-2 cursor-pointer hover:bg-background">
                     {/* Image section - premium focal point */}
-                    <div className="relative w-full overflow-hidden bg-muted h-64 md:h-72">
+                    <div className="relative w-full overflow-hidden bg-transparent h-40 sm:h-56 border-b border-primary/10 flex items-center justify-center">
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                        className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
                         priority={index === 0}
                       />
                     </div>
 
                     {/* Content section - clean and separate */}
-                    <div className="flex flex-col flex-1 p-5 md:p-6">
+                    <div className="flex flex-col flex-1 p-5 md:p-6 gap-1">
                       {/* Category badge */}
-                      <div className="mb-3 flex items-center justify-between">
-                        <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                      <div className="mb-2">
+                        <span className="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
                           {project.category}
                         </span>
-                        <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:text-primary" />
                       </div>
 
                       {/* Title */}
-                      <h4 className="mb-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                      <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary line-clamp-2">
                         {project.title}
                       </h4>
 
@@ -211,11 +213,11 @@ function WorkCarousel({
                       </p>
 
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 pt-2">
                         {project.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/20"
+                            className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/25"
                           >
                             {tag}
                           </span>
@@ -225,31 +227,30 @@ function WorkCarousel({
                   </article>
                 </a>
               ) : (
-                <article className="group flex h-full flex-col rounded-2xl border border-border/50 bg-background overflow-hidden shadow-sm transition-all duration-500 hover:shadow-2xl hover:border-primary/40 hover:-translate-y-2">
+                <article className="group flex h-full flex-col rounded-2xl border border-primary/20 bg-linear-to-br from-background to-muted/50 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/60 hover:-translate-y-2 hover:bg-background">
                   {/* Image section - premium focal point */}
-                  <div className="relative w-full overflow-hidden bg-muted h-64 md:h-72">
+                  <div className="relative w-full overflow-hidden bg-transparent h-40 sm:h-56 border-b border-primary/10 flex items-center justify-center">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                      className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
                       priority={index === 0}
                     />
                   </div>
 
                   {/* Content section - clean and separate */}
-                  <div className="flex flex-col flex-1 p-5 md:p-6">
+                  <div className="flex flex-col flex-1 p-5 md:p-6 gap-1">
                     {/* Category badge */}
-                    <div className="mb-3 flex items-center justify-between">
-                      <span className="inline-flex items-center rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
+                    <div className="mb-2">
+                      <span className="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
                         {project.category}
                       </span>
-                      <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:text-primary" />
                     </div>
 
                     {/* Title */}
-                    <h4 className="mb-2 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary">
+                    <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary line-clamp-2">
                       {project.title}
                     </h4>
 
@@ -259,11 +260,11 @@ function WorkCarousel({
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-2">
                       {project.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/20"
+                          className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/25"
                         >
                           {tag}
                         </span>
@@ -275,10 +276,6 @@ function WorkCarousel({
             </CarouselItem>
           ))}
         </CarouselContent>
-
-        {/* Navigation - visible on hover on desktop & mobile */}
-        <CarouselPrevious className="md:flex md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:-translate-x-16 md:z-50 h-10 w-10 md:h-11 md:w-11 rounded-full border-0 bg-primary/90 text-primary-foreground md:opacity-0 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:-translate-x-14 hover:bg-primary shadow-lg" />
-        <CarouselNext className="md:flex md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-16 md:z-50 h-10 w-10 md:h-11 md:w-11 rounded-full border-0 bg-primary/90 text-primary-foreground md:opacity-0 md:transition-all md:duration-300 md:group-hover:opacity-100 md:group-hover:translate-x-14 hover:bg-primary shadow-lg" />
       </Carousel>
     </div>
   );
@@ -305,11 +302,13 @@ export function Portfolio() {
         </div>
 
         <div className="space-y-14">
-          <WorkCarousel
-            title="Graphics Design"
-            subtitle="Brand design projects that help businesses stand out in the market."
-            projects={graphicsProjects}
-          />
+          <div className="hidden">
+            <WorkCarousel
+              title="Graphics Design"
+              subtitle="Brand design projects that help businesses stand out in the market."
+              projects={graphicsProjects}
+            />
+          </div>
 
           <WorkCarousel
             title="Web development"

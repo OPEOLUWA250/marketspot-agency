@@ -33,10 +33,10 @@ export function CTA() {
           >
             <Button
               size="lg"
-              className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all group"
+              className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 active:bg-primary/80 transition-all duration-300 group hover:shadow-lg active:shadow-md hover:scale-105 active:scale-95"
             >
               Request a custom digital presence audit
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 active:translate-x-2 transition-transform" />
             </Button>
           </div>
 
@@ -48,16 +48,10 @@ export function CTA() {
             <p className="text-sm text-[#FFFFDE] mb-4">Or reach out directly</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <a
-                href="mailto:opeoluwadejumos@gmail.com"
-                className="text-[#FFFFDE] hover:text-[#E26128] transition-colors font-medium"
+                href="mailto:folaafolabi@marketspot.agency"
+                className="text-[#FFFFDE] hover:text-[#E26128] active:text-[#E26128] transition-all duration-300 font-medium hover:scale-110 active:scale-95 inline-block"
               >
-                opeoluwadejumos@gmail.com
-              </a>
-              <a
-                href="tel:09015883729"
-                className="text-[#FFFFDE] hover:text-[#E26128] transition-colors font-medium"
-              >
-                09015883729
+                folaafolabi@marketspot.agency
               </a>
             </div>
           </div>

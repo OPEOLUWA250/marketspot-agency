@@ -56,22 +56,22 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 animate-fade-up"
+                className="group relative p-8 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {/* Accent line on top */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-accent rounded-full group-hover:w-12 transition-all duration-300"></div>
+                <div className="absolute top-0 left-0 h-1 w-0 bg-accent rounded-full group-hover:w-12 active:w-12 transition-all duration-300"></div>
 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 active:bg-accent/25 transition-all duration-300 group-hover:scale-110 active:scale-95">
                   <Icon className="w-6 h-6 text-accent" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-foreground mb-3 transition-colors duration-300 group-hover:text-accent active:text-accent">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
                   {service.description}
                 </p>
 
@@ -80,9 +80,9 @@ export function Services() {
                   {service.highlights.map((highlight, i) => (
                     <li
                       key={i}
-                      className="text-sm text-foreground flex items-center gap-2"
+                      className="text-sm text-foreground flex items-center gap-2 transition-all duration-300 group-hover:translate-x-1"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 transition-transform group-hover:scale-125"></span>
                       {highlight}
                     </li>
                   ))}

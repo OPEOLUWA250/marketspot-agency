@@ -28,7 +28,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 backdrop-blur-sm animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full bg-[#E26128] animate-pulse"></div>
             <span className="text-sm font-medium text-[#FFFFDE]">
               Digital Excellence • Rapid Delivery
             </span>
@@ -61,16 +61,24 @@ export function Hero() {
             <Button
               size="lg"
               className="h-12 w-full sm:w-auto px-8 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all"
+              asChild
             >
-              Start Your Project
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <a
+                href="https://calendly.com/folaafolabi/consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start Your Project
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="h-12 w-full sm:w-auto px-8 rounded-full border-[#FFFFDE]/55 bg-transparent text-[#FFFFDE] hover:bg-[#FFFFDE]/10 hover:text-[#FFFFDE]"
+              asChild
             >
-              View Our Work
+              <a href="#portfolio">View Our Work</a>
             </Button>
           </div>
         </div>

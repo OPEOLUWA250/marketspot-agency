@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
 const footerSections = [
   {
@@ -92,27 +92,10 @@ export function Footer() {
                 Email
               </p>
               <a
-                href="mailto:opeoluwadejumos@gmail.com"
+                href="mailto:folaafolabi@marketspot.agency"
                 className="text-sm font-medium hover:text-background/85 transition-colors"
               >
-                opeoluwadejumos@gmail.com
-              </a>
-            </div>
-          </div>
-          <div
-            className="flex gap-3 animate-fade-up"
-            style={{ animationDelay: "0.08s" }}
-          >
-            <Phone className="w-5 h-5 text-background/80 shrink-0 mt-0.5" />
-            <div>
-              <p className="text-xs text-background/60 uppercase tracking-wide">
-                Phone
-              </p>
-              <a
-                href="tel:09015883729"
-                className="text-sm font-medium hover:text-background/85 transition-colors"
-              >
-                09015883729
+                folaafolabi@marketspot.agency
               </a>
             </div>
           </div>
