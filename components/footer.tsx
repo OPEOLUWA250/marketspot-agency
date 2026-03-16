@@ -1,22 +1,28 @@
 import Image from "next/image";
-import { Mail, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const footerSections = [
   {
     title: "Services",
     links: [
-      "Marketing and content strategy",
-      "Graphics Design",
-      "Web development",
+      { label: "Marketing and content strategy", href: "#portfolio" },
+      { label: "Graphics Design", href: "#portfolio" },
+      { label: "Web development", href: "#portfolio" },
     ],
   },
   {
     title: "Company",
-    links: ["Team", "Our Work", "Contact"],
+    links: [
+      { label: "Team", href: "#team" },
+      { label: "Our Work", href: "#portfolio" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Digital Presence Audit", "FAQ"],
+    links: [
+      { label: "Digital Presence Audit", href: "#contact" },
+    ],
   },
 ];
 
@@ -44,22 +50,15 @@ export function Footer() {
               them.
             </p>
             <div className="flex gap-3">
-              {[
-                { Icon: Linkedin, label: "LinkedIn" },
-                { Icon: Twitter, label: "Twitter" },
-                { Icon: Github, label: "GitHub" },
-              ].map((social, i) => {
-                const { Icon, label } = social;
-                return (
-                  <button
-                    key={i}
-                    className="w-9 h-9 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                    aria-label={label}
-                  >
-                    <Icon className="w-4 h-4 text-background" />
-                  </button>
-                );
-              })}
+              <a
+                href="https://www.linkedin.com/company/marketspot.agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 text-background" />
+              </a>
             </div>
           </div>
 
@@ -70,12 +69,12 @@ export function Footer() {
               </h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm text-background/75 hover:text-background transition-colors"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

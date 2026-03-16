@@ -12,40 +12,24 @@ import {
 
 const graphicsProjects = [
   {
-    title: "Marketspot Brand Launch Kit",
+    title: "The Farmers' Prayer Brand Identity",
     category: "Graphics Design",
     description:
-      "Complete visual identity system with logo suite, social templates, and campaign graphics for a modern service business.",
-    tags: ["Brand Identity", "Visual Strategy", "Campaign Assets"],
-    accent: "from-primary/25 to-secondary/10",
-    image: "/opeHS .jpg",
+      "Comprehensive brand identity for an agricultural enterprise featuring sophisticated logo design, visual system, and brand elements that communicate trust and agricultural heritage.",
+    tags: ["Brand Identity", "Agriculture", "Logo Design"],
+    accent: "from-green-500/20 to-emerald-500/10",
+    image: "/graphics/Artboard 1.jpg.jpeg",
+    link: "https://www.behance.net/gallery/226789125/The-Farmers-Prayer-Brand-Identity",
   },
   {
-    title: "Hospitality Rebrand Campaign",
+    title: "Brand Identity Design, Brandoverse",
     category: "Graphics Design",
     description:
-      "Refreshed an existing hospitality brand with a bold visual direction that improved recall across digital and print touchpoints.",
-    tags: ["Brand Refresh", "Print Design", "Social Design"],
-    accent: "from-secondary/20 to-primary/10",
-    image: "/opeHS .jpg",
-  },
-  {
-    title: "Product Story Visuals",
-    category: "Graphics Design",
-    description:
-      "Built a conversion-ready creative system for product storytelling, from ad creatives to launch visuals.",
-    tags: ["Creative Direction", "Ad Creatives", "Content Design"],
-    accent: "from-primary/20 to-muted/40",
-    image: "/opeHS .jpg",
-  },
-  {
-    title: "Corporate Identity Suite",
-    category: "Graphics Design",
-    description:
-      "Designed a full corporate identity package that helped a professional services firm stand out in a crowded market.",
-    tags: ["Identity Suite", "Presentation Design", "Brand Guidelines"],
-    accent: "from-secondary/25 to-primary/10",
-    image: "/opeHS .jpg",
+      "Complete brand strategy and visual identity design for Brandoverse, a community platform that educates and helps brand owners evolve their businesses.",
+    tags: ["Brand Strategy", "Visual Identity", "Community Branding"],
+    accent: "from-blue-500/20 to-purple-500/10",
+    image: "/graphics/Cover.png",
+    link: "https://www.behance.net/gallery/245870047/Brand-Identity-Design-Brandoverse?platform=direct",
   },
 ];
 
@@ -188,7 +172,7 @@ function WorkCarousel({
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                         priority={index === 0}
                       />
                     </div>
@@ -235,7 +219,7 @@ function WorkCarousel({
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       priority={index === 0}
                     />
                   </div>
@@ -302,13 +286,11 @@ export function Portfolio() {
         </div>
 
         <div className="space-y-14">
-          <div className="hidden">
-            <WorkCarousel
-              title="Graphics Design"
-              subtitle="Brand design projects that help businesses stand out in the market."
-              projects={graphicsProjects}
-            />
-          </div>
+          <WorkCarousel
+            title="Graphics Design"
+            subtitle="Brand design projects that help businesses stand out in the market."
+            projects={graphicsProjects}
+          />
 
           <WorkCarousel
             title="Web development"
