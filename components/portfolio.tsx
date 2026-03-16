@@ -22,7 +22,7 @@ const graphicsProjects = [
     link: "https://www.behance.net/gallery/226789125/The-Farmers-Prayer-Brand-Identity",
   },
   {
-    title: "Brand Identity Design, Brandoverse",
+    title: "Brandoverse Brand Identituy",
     category: "Graphics Design",
     description:
       "Complete brand strategy and visual identity design for Brandoverse, a community platform that educates and helps brand owners evolve their businesses.",
