@@ -19,7 +19,8 @@ const services = [
   {
     icon: faMagnifyingGlass,
     title: "SEO — Monthly Retainer",
-    tagline: "We get you to the first page of Google when your customers are searching — and we keep you there.",
+    tagline:
+      "We get you to the first page of Google when your customers are searching — and we keep you there.",
     description:
       "For a one-time $500 setup fee, we audit your site, build your strategy, and fix the technical gaps. Then for $300/month, we handle everything ongoing — blog content, backlinks, on-page optimization, and website management.",
     highlights: [
@@ -56,7 +57,7 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative p-8 md:p-10 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
+                className="group relative p-6 sm:p-7 md:p-10 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {/* Accent line on top */}
@@ -64,7 +65,10 @@ export function Services() {
 
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 active:bg-accent/25 transition-all duration-300 group-hover:scale-110 active:scale-95">
-                  <FontAwesomeIcon icon={service.icon} className="w-6 h-6 text-accent" />
+                  <FontAwesomeIcon
+                    icon={service.icon}
+                    className="w-6 h-6 text-accent"
+                  />
                 </div>
 
                 {/* Title */}

@@ -42,8 +42,7 @@ const reasons = [
   {
     icon: faCoins,
     title: "No bloated retainers",
-    description:
-      "No vanity metrics. Just revenue.",
+    description: "No vanity metrics. Just revenue.",
   },
 ];
 
@@ -69,21 +68,26 @@ export function WhyTrustUs() {
           {/* Left column - Philosophy */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our paid ads model is performance-based — no results, no management
-              fee. Our SEO retainer is priced low on purpose, because we'd rather
-              earn your trust over 90 days than lock you into a long contract.
+              Our paid ads model is performance-based — no results, no
+              management fee. Our SEO retainer is priced low on purpose, because
+              we'd rather earn your trust over 90 days than lock you into a long
+              contract.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Here's the honest truth: the big agencies have hundreds of clients.
-              You'll get an account manager, a templated strategy, and a monthly
-              report. To them, you're a number.{" "}
-              <span className="text-foreground font-semibold">To us, you're everything.</span>
+              Here's the honest truth: the big agencies have hundreds of
+              clients. You'll get an account manager, a templated strategy, and
+              a monthly report. To them, you're a number.{" "}
+              <span className="text-foreground font-semibold">
+                To us, you're everything.
+              </span>
             </p>
             <div className="pt-4 border-t border-border">
               <p className="text-lg text-foreground leading-relaxed italic">
                 We're a new company — if we don't make you money, we don't
                 survive.{" "}
-                <span className="font-semibold">That's not a pitch. That's reality.</span>
+                <span className="font-semibold">
+                  That's not a pitch. That's reality.
+                </span>
               </p>
             </div>
           </div>
@@ -91,9 +95,7 @@ export function WhyTrustUs() {
           {/* Right column - Visual emphasis */}
           <div className="flex flex-col justify-center">
             <div className="relative">
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl blur-xl"
-              ></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl blur-xl"></div>
               <div className="relative bg-gradient-to-br from-accent/5 to-transparent border border-accent/20 rounded-2xl p-8 md:p-10">
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
@@ -101,8 +103,12 @@ export function WhyTrustUs() {
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">Performance-based pricing</p>
-                      <p className="text-sm text-muted-foreground mt-1">No results, no fees</p>
+                      <p className="font-semibold text-foreground">
+                        Performance-based pricing
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        No results, no fees
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -110,8 +116,12 @@ export function WhyTrustUs() {
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">Low retainer pricing</p>
-                      <p className="text-sm text-muted-foreground mt-1">Earn trust over 90 days</p>
+                      <p className="font-semibold text-foreground">
+                        Low retainer pricing
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Earn trust over 90 days
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -119,8 +129,12 @@ export function WhyTrustUs() {
                       <div className="w-2 h-2 rounded-full bg-accent"></div>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">Your success = Our success</p>
-                      <p className="text-sm text-muted-foreground mt-1">Perfectly aligned incentives</p>
+                      <p className="font-semibold text-foreground">
+                        Your success = Our success
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Perfectly aligned incentives
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -151,7 +165,10 @@ export function WhyTrustUs() {
 
                 {/* Icon */}
                 <div className="mb-4">
-                  <FontAwesomeIcon icon={reason.icon} className="w-6 h-6 text-accent opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                  <FontAwesomeIcon
+                    icon={reason.icon}
+                    className="w-6 h-6 text-accent opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                  />
                 </div>
 
                 {/* Content */}
@@ -169,7 +186,8 @@ export function WhyTrustUs() {
         {/* Bottom emphasis */}
         <div className="mt-16 pt-12 border-t border-border/50 text-center animate-fade-up">
           <p className="text-xl md:text-2xl font-bold text-foreground italic">
-            <span className="text-accent">No vanity metrics.</span> Just revenue.
+            <span className="text-accent">No vanity metrics.</span> Just
+            revenue.
           </p>
         </div>
       </div>

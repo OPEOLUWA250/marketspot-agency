@@ -106,7 +106,10 @@ export function Team() {
                       className="w-9 h-9 rounded-lg bg-muted hover:bg-accent/20 active:bg-accent/30 text-foreground hover:text-accent active:text-accent transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
                       aria-label={`${member.name} Instagram`}
                     >
-                      <FontAwesomeIcon icon={faInstagram} className="w-4 h-4 transition-transform duration-300 group-hover:scale-125" />
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="w-4 h-4 transition-transform duration-300 group-hover:scale-125"
+                      />
                     </a>
                   )}
                 </div>

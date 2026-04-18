@@ -15,12 +15,17 @@ export function ReadyToStart() {
               Ready to transform your revenue?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Let's discuss how Marketspot can help your business scale. Whether you're ready to start immediately or just exploring options, we're here to help.
+              Let's discuss how Marketspot can help your business scale. Whether
+              you're ready to start immediately or just exploring options, we're
+              here to help.
             </p>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.08s" }}>
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
+            style={{ animationDelay: "0.08s" }}
+          >
             <a href="#contact" className="w-full sm:w-auto">
               <Button
                 size="lg"

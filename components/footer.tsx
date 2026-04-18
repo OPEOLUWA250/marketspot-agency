@@ -38,13 +38,15 @@ export function Footer() {
         <div
           className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: "radial-gradient(circle, rgba(226, 97, 40, 0.1), transparent)",
+            background:
+              "radial-gradient(circle, rgba(226, 97, 40, 0.1), transparent)",
           }}
         ></div>
         <div
           className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: "radial-gradient(circle, rgba(7, 80, 86, 0.1), transparent)",
+            background:
+              "radial-gradient(circle, rgba(7, 80, 86, 0.1), transparent)",
           }}
         ></div>
       </div>
@@ -74,8 +76,11 @@ export function Footer() {
                 </div>
 
                 <p className="text-base text-background/75 leading-relaxed font-light max-w-sm">
-                  We help small to mid-size businesses attract, nurture and convert their right audience through{" "}
-                  <span className="font-semibold text-background">Done-for-you Paid ads and SEO.</span>
+                  We help small to mid-size businesses attract, nurture and
+                  convert their right audience through{" "}
+                  <span className="font-semibold text-background">
+                    Done-for-you Paid ads and SEO.
+                  </span>
                 </p>
 
                 <div className="flex gap-3 pt-2">
@@ -95,7 +100,11 @@ export function Footer() {
             {/* Three Link Sections - Spans 8 */}
             <div className="md:col-span-8 grid grid-cols-3 gap-8">
               {footerSections.map((section, idx) => (
-                <div key={section.title} className="space-y-5 animate-fade-up" style={{ animationDelay: `${idx * 0.05}s` }}>
+                <div
+                  key={section.title}
+                  className="space-y-5 animate-fade-up"
+                  style={{ animationDelay: `${idx * 0.05}s` }}
+                >
                   <h4 className="font-bold text-xs tracking-widest uppercase text-background/80 flex items-center gap-2">
                     <span className="w-1 h-4 bg-gradient-to-b from-accent to-accent/40 rounded-full"></span>
                     {section.title}
@@ -122,7 +131,10 @@ export function Footer() {
           <div className="h-px bg-gradient-to-r from-background/0 via-background/20 to-background/0 mb-12"></div>
 
           {/* Footer Bottom - Premium Copyright */}
-          <div className="text-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="text-center animate-fade-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <p className="text-sm text-background/60 font-medium">
               &copy; {year} Marketspot Agency. All rights reserved.
             </p>
