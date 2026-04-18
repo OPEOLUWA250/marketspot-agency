@@ -1,22 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar if scrolling up or at the top
+      if (currentScrollY < lastScrollY || currentScrollY < 50) {
+        setIsVisible(true);
+      }
+      // Hide navbar if scrolling down and past a threshold
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const navItems = [
     { label: "Services", href: "#services" },
+    { label: "Why Trust Us", href: "#why-trust-us" },
     { label: "Team", href: "#team" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 pt-4 transition-all duration-300 ${
+      isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+    }`}>
       <nav className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between rounded-2xl border border-border/70 bg-background/85 backdrop-blur-md shadow-sm animate-fade-in">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -46,9 +71,11 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Button className="h-10 px-6 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-            Get Started
-          </Button>
+          <a href="#contact">
+            <Button className="h-10 px-6 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+              Get Started
+            </Button>
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -79,9 +106,11 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <Button className="w-full h-10 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-              Get Started
-            </Button>
+            <a href="#contact" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button className="w-full h-10 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+                Get Started
+              </Button>
+            </a>
           </div>
         </div>
       )}

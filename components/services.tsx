@@ -1,33 +1,34 @@
-import { Code2, Palette, TrendingUp } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFire, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
   {
-    icon: TrendingUp,
-    title: "Marketing and content strategy",
+    icon: faFire,
+    title: "Paid Ads — Performance-Based",
+    tagline: "We run your ads. You fund the account. That's it.",
     description:
-      "Marketing strategies that help your audience find you easily.",
+      "From creative and copy to strategy and optimization — we handle everything. You only pay a management fee once we've shown results, plus a commission on the leads and customers we generate for you.",
     highlights: [
-      "SEO Optimization",
-      "Social Media Strategy",
-      "Growth Marketing",
+      "Ad creatives",
+      "Campaign strategy",
+      "Audience targeting",
+      "Sales page copy",
+      "Full campaign management",
     ],
   },
   {
-    icon: Palette,
-    title: "Graphics Design",
+    icon: faMagnifyingGlass,
+    title: "SEO — Monthly Retainer",
+    tagline: "We get you to the first page of Google when your customers are searching — and we keep you there.",
     description:
-      "Brand designs that help your business stand out in the market.",
-    highlights: ["Brand Identity", "UI/UX Design", "Visual Strategy"],
-  },
-  {
-    icon: Code2,
-    title: "Web development",
-    description:
-      "Custom websites built with modern tech designed to help your business be seen easily on the internet.",
+      "For a one-time $500 setup fee, we audit your site, build your strategy, and fix the technical gaps. Then for $300/month, we handle everything ongoing — blog content, backlinks, on-page optimization, and website management.",
     highlights: [
-      "Performance-first Websites",
-      "Full-stack Development",
-      "E-commerce Solutions",
+      "Keyword research",
+      "SEO strategy",
+      "Monthly content",
+      "Technical fixes",
+      "Backlink building",
+      "Monthly reports",
     ],
   },
 ];
@@ -39,24 +40,23 @@ export function Services() {
         {/* Section header */}
         <div className="max-w-3xl mb-16 animate-fade-up">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-            Our Expertise
+            What We Do
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-foreground text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Services designed for your growth
+            Services that drive real results
           </h2>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
+                className="group relative p-8 md:p-10 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {/* Accent line on top */}
@@ -64,15 +64,27 @@ export function Services() {
 
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 active:bg-accent/25 transition-all duration-300 group-hover:scale-110 active:scale-95">
-                  <Icon className="w-6 h-6 text-accent" />
+                  <FontAwesomeIcon icon={service.icon} className="w-6 h-6 text-accent" />
                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold text-foreground mb-3 transition-colors duration-300 group-hover:text-accent active:text-accent">
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent active:text-accent">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
+
+                {/* Tagline */}
+                <p className="text-sm font-medium text-accent mb-4 transition-colors duration-300">
+                  {service.tagline}
+                </p>
+
+                {/* Description */}
+                <p className="text-muted-foreground mb-8 leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
                   {service.description}
+                </p>
+
+                {/* What we do label */}
+                <p className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-4">
+                  What we do:
                 </p>
 
                 {/* Highlights */}
@@ -80,10 +92,10 @@ export function Services() {
                   {service.highlights.map((highlight, i) => (
                     <li
                       key={i}
-                      className="text-sm text-foreground flex items-center gap-2 transition-all duration-300 group-hover:translate-x-1"
+                      className="text-sm text-foreground flex items-start gap-3 transition-all duration-300 group-hover:translate-x-1"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 transition-transform group-hover:scale-125"></span>
-                      {highlight}
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 transition-transform group-hover:scale-125 mt-1.5"></span>
+                      <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>

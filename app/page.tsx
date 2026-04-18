@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
+import { WhyTrustUs } from "@/components/why-trust-us";
 import { Team } from "@/components/team";
 import { Portfolio } from "@/components/portfolio";
 import { CTA } from "@/components/cta";
@@ -99,6 +100,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <WhyTrustUs />
       <Portfolio />
       <Team />
       <CTA />

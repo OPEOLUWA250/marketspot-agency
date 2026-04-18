@@ -39,8 +39,10 @@ export function Hero() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Making businesses seen
-            <span className="block text-[#E26128]">where it matters</span>
+            Helping Small to mid-size businesses
+            <span className="block text-[#E26128]">
+              cross $1m/yr in Revenue
+            </span>
           </h1>
 
           {/* Subheading */}
@@ -49,8 +51,7 @@ export function Hero() {
             style={{ animationDelay: "0.2s" }}
           >
             We help Small to mid-size businesses attract, nurture and convert
-            their right audience through digital strategies most valuable to
-            them.
+            their right audience through Done-for-you Paid ads and SEO.
           </p>
 
           {/* CTA Buttons */}

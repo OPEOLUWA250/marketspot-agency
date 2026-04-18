@@ -1,18 +1,21 @@
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const teamMembers = [
   {
     name: "Fola Afolabi",
-    role: "Founder",
-    specialty: "Marketing & Growth Strategist",
-    bio: "Growth-focused marketer who helps businesses build audiences that convert. 8 businesses helped across 5 countries so far.",
+    role: "Founder - Growth Lead",
+    specialty: "Growth Strategist",
+    bio: "Growth-focused strategist with a marketing background who is focused on helping businesses increase their revenue through digital strategies. 8 businesses across 5 countries so far.",
     image: "/afollyHS.jpeg",
     linkedin: "https://www.linkedin.com/in/fola-afolabi-74698426a/",
+    instagram: "https://www.instagram.com/folaafolabi_",
   },
   {
     name: "Joseph Oyebamiji",
-    role: "Co-founder",
+    role: "Co-founder - Creative Lead",
     specialty: "Branding & Creative Lead",
     bio: "Helping businesses stand out through design and creative strategy. Over 50+ brands built.",
     image: "/jdHS.png",
@@ -20,8 +23,8 @@ const teamMembers = [
   },
   {
     name: "Adejumo Opeoluwa",
-    role: "Co-founder",
-    specialty: "Tech and Operations Lead",
+    role: "Co-founder - Tech and Operations Lead",
+    specialty: "Tech & Operations",
     bio: "Web developer who helps businesses get noticed on the internet and project manager who turns ideas into reality in time. Over 20 brands worked with.",
     image: "/opeHS .jpg",
     linkedin: "https://www.linkedin.com/in/opeoluwa-adejumo/",
@@ -34,14 +37,14 @@ export function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mb-16 animate-fade-up">
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
             Meet the Team
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold text-foreground text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
-            Talented minds, bold vision
+            Meet the Founding Team
           </h2>
         </div>
 
@@ -95,6 +98,17 @@ export function Team() {
                   >
                     <Linkedin className="w-4 h-4 transition-transform duration-300 group-hover:scale-125" />
                   </a>
+                  {member.instagram && (
+                    <a
+                      href={member.instagram}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-9 h-9 rounded-lg bg-muted hover:bg-accent/20 active:bg-accent/30 text-foreground hover:text-accent active:text-accent transition-all duration-300 flex items-center justify-center hover:scale-110 active:scale-95"
+                      aria-label={`${member.name} Instagram`}
+                    >
+                      <FontAwesomeIcon icon={faInstagram} className="w-4 h-4 transition-transform duration-300 group-hover:scale-125" />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
