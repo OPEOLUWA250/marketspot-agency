@@ -101,7 +101,8 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyTrustUs />
-      <Portfolio />
+      {/* Portfolio section - Hidden for now */}
+      {/* <Portfolio /> */}
       <Team />
       <CTA />
       <Footer />

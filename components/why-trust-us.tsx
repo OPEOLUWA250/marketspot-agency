@@ -53,7 +53,7 @@ export function WhyTrustUs() {
         {/* Header */}
         <div className="max-w-4xl mb-16 animate-fade-up">
           <h2
-            className="text-5xl md:text-6xl font-bold text-foreground mb-6 text-balance"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
             Why Trust Us?
@@ -73,17 +73,17 @@ export function WhyTrustUs() {
               we'd rather earn your trust over 90 days than lock you into a long
               contract.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Here's the honest truth: the big agencies have hundreds of
               clients. You'll get an account manager, a templated strategy, and
-              a monthly report. To them, you're a number.{" "}
-              <span className="text-foreground font-semibold">
-                To us, you're everything.
-              </span>
+              a monthly report.
+            </p>
+            <p className="text-xl sm:text-2xl font-black text-accent leading-relaxed">
+              To them, you're a number. To us, you're everything.
             </p>
             <div className="pt-4 border-t border-border">
               <p className="text-lg text-foreground leading-relaxed italic">
-                We're a new company — if we don't make you money, we don't
+                We're a new company, if we don't make you money, we don't
                 survive.{" "}
                 <span className="font-semibold">
                   That's not a pitch. That's reality.

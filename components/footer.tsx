@@ -53,11 +53,11 @@ export function Footer() {
 
       <div className="relative">
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
           {/* Top Section - Unified Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-8 mb-10 sm:mb-12">
             {/* Brand Column - Spans 4 */}
-            <div className="md:col-span-4 space-y-8 animate-fade-up">
+            <div className="md:col-span-4 space-y-6 sm:space-y-8 animate-fade-up">
               <div className="space-y-6">
                 <div className="flex items-center gap-3 group">
                   <div className="relative">
@@ -98,23 +98,23 @@ export function Footer() {
             </div>
 
             {/* Three Link Sections - Spans 8 */}
-            <div className="md:col-span-8 grid grid-cols-3 gap-8">
+            <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
               {footerSections.map((section, idx) => (
                 <div
                   key={section.title}
-                  className="space-y-5 animate-fade-up"
+                  className="space-y-4 sm:space-y-5 animate-fade-up"
                   style={{ animationDelay: `${idx * 0.05}s` }}
                 >
                   <h4 className="font-bold text-xs tracking-widest uppercase text-background/80 flex items-center gap-2">
                     <span className="w-1 h-4 bg-gradient-to-b from-accent to-accent/40 rounded-full"></span>
                     {section.title}
                   </h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {section.links.map((link) => (
                       <li key={link.label}>
                         <a
                           href={link.href}
-                          className="text-sm text-background/70 hover:text-background transition-colors duration-300 font-medium flex items-center gap-1.5 group"
+                          className="text-xs sm:text-sm text-background/70 hover:text-background transition-colors duration-300 font-medium flex items-center gap-1.5 group"
                         >
                           <span className="w-0 h-0.5 bg-accent group-hover:w-2 transition-all duration-300"></span>
                           {link.label}
@@ -128,7 +128,7 @@ export function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-background/0 via-background/20 to-background/0 mb-12"></div>
+          <div className="h-px bg-gradient-to-r from-background/0 via-background/20 to-background/0 mb-8 sm:mb-12"></div>
 
           {/* Footer Bottom - Premium Copyright */}
           <div

@@ -164,44 +164,54 @@ function WorkCarousel({
                   rel="noopener noreferrer"
                   className="block h-full"
                 >
-                  <article className="group flex h-full flex-col rounded-2xl border border-primary/20 bg-linear-to-br from-background to-muted/50 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/60 hover:-translate-y-2 cursor-pointer hover:bg-background">
-                    {/* Image section - premium focal point */}
-                    <div className="relative w-full overflow-hidden bg-transparent h-40 sm:h-56 border-b border-primary/10 flex items-center justify-center">
+                  <article className="group relative flex h-full flex-col rounded-2xl border border-primary/30 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/80 hover:-translate-y-2 cursor-pointer bg-background hover:bg-gradient-to-br hover:from-background hover:to-muted/80">
+                    {/* Accent bar at top */}
+                    <div
+                      className={`h-1.5 w-full bg-gradient-to-r ${project.accent} transition-all duration-500 group-hover:h-2`}
+                    ></div>
+
+                    {/* Image section with gradient overlay */}
+                    <div className="relative w-full overflow-hidden bg-gradient-to-br from-background/20 to-muted/50 h-40 sm:h-56 flex items-center justify-center">
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                      ></div>
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                         priority={index === 0}
                       />
                     </div>
 
-                    {/* Content section - clean and separate */}
-                    <div className="flex flex-col flex-1 p-5 md:p-6 gap-1">
-                      {/* Category badge */}
-                      <div className="mb-2">
-                        <span className="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
+                    {/* Content section with enhanced styling */}
+                    <div className="flex flex-col flex-1 p-5 md:p-6 gap-2">
+                      {/* Category badge - more vibrant */}
+                      <div className="mb-1">
+                        <span
+                          className={`inline-flex items-center rounded-full bg-gradient-to-r ${project.accent} px-3 py-1.5 text-xs font-bold text-foreground shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-105`}
+                        >
                           {project.category}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary line-clamp-2">
+                      <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:text-transparent group-hover:from-primary group-hover:to-secondary line-clamp-2">
                         {project.title}
                       </h4>
 
                       {/* Description */}
-                      <p className="flex-1 mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                      <p className="flex-1 mb-3 text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors line-clamp-2">
                         {project.description}
                       </p>
 
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 pt-2">
+                      {/* Tags - more colorful */}
+                      <div className="flex flex-wrap gap-2 pt-2 border-t border-primary/10 group-hover:border-primary/30 transition-colors">
                         {project.tags.slice(0, 2).map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/25"
+                            className={`rounded-full bg-gradient-to-r ${project.accent} px-2.5 py-1 text-xs font-semibold text-foreground/70 transition-all duration-300 group-hover:text-foreground group-hover:font-bold`}
                           >
                             {tag}
                           </span>
@@ -211,44 +221,54 @@ function WorkCarousel({
                   </article>
                 </a>
               ) : (
-                <article className="group flex h-full flex-col rounded-2xl border border-primary/20 bg-linear-to-br from-background to-muted/50 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/60 hover:-translate-y-2 hover:bg-background">
-                  {/* Image section - premium focal point */}
-                  <div className="relative w-full overflow-hidden bg-transparent h-40 sm:h-56 border-b border-primary/10 flex items-center justify-center">
+                <article className="group relative flex h-full flex-col rounded-2xl border border-primary/30 overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-primary/80 hover:-translate-y-2 cursor-pointer bg-background hover:bg-gradient-to-br hover:from-background hover:to-muted/80">
+                  {/* Accent bar at top */}
+                  <div
+                    className={`h-1.5 w-full bg-gradient-to-r ${project.accent} transition-all duration-500 group-hover:h-2`}
+                  ></div>
+
+                  {/* Image section with gradient overlay */}
+                  <div className="relative w-full overflow-hidden bg-gradient-to-br from-background/20 to-muted/50 h-40 sm:h-56 flex items-center justify-center">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                    ></div>
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                       priority={index === 0}
                     />
                   </div>
 
-                  {/* Content section - clean and separate */}
-                  <div className="flex flex-col flex-1 p-5 md:p-6 gap-1">
-                    {/* Category badge */}
-                    <div className="mb-2">
-                      <span className="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
+                  {/* Content section with enhanced styling */}
+                  <div className="flex flex-col flex-1 p-5 md:p-6 gap-2">
+                    {/* Category badge - more vibrant */}
+                    <div className="mb-1">
+                      <span
+                        className={`inline-flex items-center rounded-full bg-gradient-to-r ${project.accent} px-3 py-1.5 text-xs font-bold text-foreground shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-105`}
+                      >
                         {project.category}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-primary line-clamp-2">
+                    <h4 className="mb-1 text-lg font-bold leading-snug text-foreground transition-colors group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:text-transparent group-hover:from-primary group-hover:to-secondary line-clamp-2">
                       {project.title}
                     </h4>
 
                     {/* Description */}
-                    <p className="flex-1 mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                    <p className="flex-1 mb-3 text-sm leading-relaxed text-muted-foreground group-hover:text-foreground/80 transition-colors line-clamp-2">
                       {project.description}
                     </p>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 pt-2">
+                    {/* Tags - more colorful */}
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-primary/10 group-hover:border-primary/30 transition-colors">
                       {project.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent transition-colors group-hover:bg-accent/25"
+                          className={`rounded-full bg-gradient-to-r ${project.accent} px-2.5 py-1 text-xs font-semibold text-foreground/70 transition-all duration-300 group-hover:text-foreground group-hover:font-bold`}
                         >
                           {tag}
                         </span>
@@ -267,19 +287,38 @@ function WorkCarousel({
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-muted/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="portfolio"
+      className="relative py-20 md:py-32 bg-[#075056] overflow-hidden"
+    >
+      {/* Decorative background elements - matching hero */}
+      <div className="absolute inset-0 opacity-20">
+        <div
+          className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #E26128, transparent)",
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #E26128, transparent)",
+          }}
+        ></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-14 animate-fade-up">
-          <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 text-[#FFFFDE] text-sm font-medium mb-4">
             Our Work
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold text-foreground text-balance"
+            className="text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
             Focused portfolios, faster browsing
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="mt-4 text-lg text-[#FFFFDE]/75 leading-relaxed max-w-2xl">
             Explore selected projects by category without scrolling through a
             long page.
           </p>

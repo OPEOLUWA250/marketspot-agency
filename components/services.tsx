@@ -22,7 +22,7 @@ const services = [
     tagline:
       "We get you to the first page of Google when your customers are searching — and we keep you there.",
     description:
-      "For a one-time $500 setup fee, we audit your site, build your strategy, and fix the technical gaps. Then for $300/month, we handle everything ongoing — blog content, backlinks, on-page optimization, and website management.",
+      "$500 setup + $300/month — we audit your site, build your strategy, and fix the technical gaps. Then monthly, we handle everything ongoing — blog content, backlinks, on-page optimization, and website management.",
     highlights: [
       "Keyword research",
       "SEO strategy",
@@ -44,7 +44,7 @@ export function Services() {
             What We Do
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold text-foreground text-balance"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
             Services that drive real results

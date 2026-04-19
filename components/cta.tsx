@@ -20,7 +20,7 @@ export function CTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance mb-6 animate-fade-up"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FFFFDE] text-balance mb-6 animate-fade-up"
             style={{ letterSpacing: "-0.02em" }}
           >
             Ready to get your business seen by your{" "}

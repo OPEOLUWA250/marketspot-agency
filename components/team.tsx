@@ -41,7 +41,7 @@ export function Team() {
             Meet the Team
           </span>
           <h2
-            className="text-4xl md:text-5xl font-bold text-foreground text-balance"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-balance"
             style={{ letterSpacing: "-0.02em" }}
           >
             Meet the Founding Team

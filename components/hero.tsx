@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative h-svh overflow-hidden bg-[#075056] pt-24 pb-8 md:pt-28 md:pb-10 flex items-center">
+    <section className="relative min-h-screen md:h-svh overflow-hidden bg-[#075056] pt-16 pb-6 md:pt-24 md:pb-8 flex items-center">
       {/* Ultra-thin decorative lines */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -22,21 +22,21 @@ export function Hero() {
       </div>
 
       <div className="relative w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="space-y-6 md:space-y-7 text-center max-w-5xl mx-auto">
+        <div className="space-y-7 sm:space-y-8 md:space-y-10 text-center max-w-5xl mx-auto">
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FFFFDE]/35 bg-[#FFFFDE]/10 backdrop-blur-sm animate-fade-up"
             style={{ animationDelay: "0.05s" }}
           >
             <div className="w-2 h-2 rounded-full bg-[#E26128] animate-pulse"></div>
-            <span className="text-sm font-medium text-[#FFFFDE]">
-              Digital Excellence • Rapid Delivery
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-[#FFFFDE]">
+              Real digital growth | Real business results
             </span>
           </div>
 
           {/* Main heading - Ultra thin, bold font weight */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
             Helping Small to mid-size businesses
@@ -47,16 +47,15 @@ export function Hero() {
 
           {/* Subheading */}
           <p
-            className="max-w-3xl mx-auto text-lg md:text-xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
+            className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            We help Small to mid-size businesses attract, nurture and convert
-            their right audience through Done-for-you Paid ads and SEO.
+            through Done-for-you Paid ads and SEO.
           </p>
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full max-w-sm mx-auto sm:max-w-none animate-fade-up"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 w-full max-w-sm mx-auto sm:max-w-none animate-fade-up"
             style={{ animationDelay: "0.28s" }}
           >
             <Button
@@ -72,14 +71,6 @@ export function Hero() {
                 Start Your Project
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-12 w-full sm:w-auto px-8 rounded-full border-[#FFFFDE]/55 bg-transparent text-[#FFFFDE] hover:bg-[#FFFFDE]/10 hover:text-[#FFFFDE]"
-              asChild
-            >
-              <a href="#portfolio">View Our Work</a>
             </Button>
           </div>
         </div>
