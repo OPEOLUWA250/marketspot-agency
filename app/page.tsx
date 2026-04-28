@@ -5,16 +5,52 @@ import { WhyTrustUs } from "@/components/why-trust-us";
 import { Team } from "@/components/team";
 import { Portfolio } from "@/components/portfolio";
 import { CTA } from "@/components/cta";
+import { FAQ, faqItems } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { BackToTop } from "@/components/back-to-top";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Marketspot Agency | Digital Excellence & Speed",
+  title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
   description:
-    "Award-winning digital marketing agency specializing in web development, graphics design, branding, and digital strategy. We help SMBs attract and convert their ideal customers.",
-  keywords:
-    "digital marketing, web development, graphics design, branding, digital strategy, digital agency Kenya",
+    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+  keywords: [
+    "digital marketing agency",
+    "seo services",
+    "paid ads agency",
+    "web development",
+    "branding services",
+  ],
+  openGraph: {
+    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
+    description:
+      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+    type: "website",
+    url: "/",
+    siteName: "Marketspot Agency",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketspot Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
+    description:
+      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Home() {
@@ -83,6 +119,19 @@ export default function Home() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <main id="top" className="min-h-screen bg-background overflow-hidden">
       <script
@@ -97,6 +146,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <Hero />
       <Services />
@@ -104,6 +157,7 @@ export default function Home() {
       {/* Portfolio section - Hidden for now */}
       {/* <Portfolio /> */}
       <Team />
+      <FAQ />
       <CTA />
       <Footer />
       <BackToTop />

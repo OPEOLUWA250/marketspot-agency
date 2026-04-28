@@ -14,6 +14,7 @@ const footerSections = [
     title: "Company",
     links: [
       { label: "Meet the Team", href: "#team" },
+      { label: "FAQ", href: "#faq" },
       { label: "Our Work", href: "#portfolio" },
       { label: "Contact Us", href: "#contact" },
     ],

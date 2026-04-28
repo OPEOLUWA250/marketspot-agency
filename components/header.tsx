@@ -34,6 +34,7 @@ export function Header() {
     { label: "Services", href: "#services" },
     { label: "Why Trust Us", href: "#why-trust-us" },
     { label: "Team", href: "#team" },
+    { label: "FAQ", href: "#faq" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "Contact", href: "#contact" },
   ];

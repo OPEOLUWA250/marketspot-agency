@@ -6,18 +6,22 @@ import "./globals.css";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["600"] });
 
 export const metadata: Metadata = {
-  title: "Marketspot Agency | Digital Excellence & Speed",
-  description:
-    "Award-winning digital marketing agency specializing in web development, graphics design, branding, and digital strategy. We help SMBs attract and convert their ideal customers with excellence and speed.",
-  keywords:
-    "digital marketing, web development, graphics design, branding, digital strategy, SMB marketing, digital agency Kenya, web design agency, branding services",
-  generator: "Marketspot Agency",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
+  metadataBase: new URL("https://marketspot.agency"),
+  title: {
+    default: "Marketspot Agency | Digital Marketing, SEO & Web Development",
+    template: "%s | Marketspot Agency",
   },
+  description:
+    "Marketspot Agency helps SMBs grow with SEO, paid ads, branding, and web development. We focus on measurable revenue, technical SEO, and conversion-driven content.",
+  keywords: [
+    "digital marketing agency",
+    "seo agency",
+    "web development agency",
+    "paid ads agency",
+    "branding agency",
+    "marketspot agency",
+  ],
+  generator: "Marketspot Agency",
   icons: {
     icon: [
       {
@@ -33,16 +37,16 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Marketspot Agency - Digital Excellence & Speed",
+    title: "Marketspot Agency | Digital Marketing, SEO & Web Development",
     description:
-      "Expert digital marketing, web development, and graphics design services for SMBs. We deliver excellence and speed.",
+      "Digital marketing, SEO, paid ads, branding, and web development for SMBs that want measurable growth.",
     type: "website",
-    locale: "en_NG",
-    url: "https://marketspot.agency",
+    locale: "en_US",
+    url: "/",
     siteName: "Marketspot Agency",
     images: [
       {
-        url: "https://marketspot.agency/logo.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Marketspot Agency",
@@ -52,10 +56,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketspot Agency",
-    description: "Digital Excellence & Speed",
+    title: "Marketspot Agency | Digital Marketing, SEO & Web Development",
+    description: "Digital marketing, SEO, paid ads, branding, and web development for SMBs.",
     creator: "@marketspot",
-    images: ["https://marketspot.agency/logo.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -69,7 +73,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://marketspot.agency",
+    canonical: "/",
   },
   category: "Business",
 };
@@ -80,10 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      style={{ [spaceGrotesk.cssVariable]: spaceGrotesk.style.fontFamily }}
-    >
+    <html lang="en">
       <body className="font-sans antialiased">
         {children}
         <Analytics />

@@ -39,9 +39,9 @@ export function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Helping Small to mid-size businesses
+            Digital marketing agency helping SMBs
             <span className="block text-[#E26128]">
-              cross $1m/yr in Revenue
+              grow with SEO and paid ads
             </span>
           </h1>
 
@@ -50,7 +50,8 @@ export function Hero() {
             className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            through Done-for-you Paid ads and SEO.
+            We build search-first websites, conversion-focused content, and
+            performance campaigns that turn traffic into revenue.
           </p>
 
           {/* CTA Buttons */}
