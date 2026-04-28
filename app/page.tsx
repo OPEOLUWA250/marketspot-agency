@@ -11,7 +11,7 @@ import { BackToTop } from "@/components/back-to-top";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
+  title: "Marketspot Agency | SEO, Paid Ads & Web Development",
   description:
     "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "branding services",
   ],
   openGraph: {
-    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
+    title: "Marketspot Agency | SEO, Paid Ads & Web Development",
     description:
       "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development",
+    title: "Marketspot Agency | SEO, Paid Ads & Web Development",
     description:
       "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
     images: ["/logo.png"],
@@ -61,7 +61,7 @@ export default function Home() {
     url: "https://marketspot.agency",
     logo: "https://marketspot.agency/logo.png",
     description:
-      "Digital marketing agency specializing in web development, graphics design, and digital strategy for SMBs.",
+      "Marketspot Agency helps SMBs grow with SEO, paid ads, branding, and web development.",
     email: "folaafolabi@marketspot.agency",
     address: {
       "@type": "PostalAddress",
@@ -79,7 +79,7 @@ export default function Home() {
     name: "Marketspot Agency",
     image: "https://marketspot.agency/logo.png",
     description:
-      "Digital marketing and web development services for small to mid-size businesses.",
+      "SEO, paid ads, branding, and web development services for small to mid-size businesses.",
     url: "https://marketspot.agency",
     telephone: "contact us via email",
     priceRange: "$$",
@@ -87,21 +87,21 @@ export default function Home() {
     service: [
       {
         "@type": "Service",
+        name: "SEO",
+        description:
+          "Technical SEO, on-page optimization, content strategy, and authority building to improve Google rankings.",
+      },
+      {
+        "@type": "Service",
+        name: "Paid Ads",
+        description:
+          "Performance-based ad management focused on leads, customers, and measurable return on spend.",
+      },
+      {
+        "@type": "Service",
         name: "Web Development",
         description:
-          "Custom website design and development for businesses looking to establish strong online presence.",
-      },
-      {
-        "@type": "Service",
-        name: "Graphics Design",
-        description:
-          "Professional branding, logo design, and visual identity solutions.",
-      },
-      {
-        "@type": "Service",
-        name: "Digital Marketing Strategy",
-        description:
-          "Comprehensive digital marketing and content strategy to attract your target audience.",
+          "Conversion-focused websites and landing pages built to support SEO and paid traffic.",
       },
     ],
   };

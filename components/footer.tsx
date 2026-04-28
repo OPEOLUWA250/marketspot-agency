@@ -77,10 +77,9 @@ export function Footer() {
                 </div>
 
                 <p className="text-base text-background/75 leading-relaxed font-light max-w-sm">
-                  We help small to mid-size businesses attract, nurture and
-                  convert their right audience through{" "}
+                  We help small to mid-size businesses grow with{" "}
                   <span className="font-semibold text-background">
-                    Done-for-you Paid ads and SEO.
+                    SEO, paid ads, branding, and web development.
                   </span>
                 </p>
 
