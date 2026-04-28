@@ -57,7 +57,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Marketspot Agency | Digital Marketing, SEO & Web Development",
-    description: "Digital marketing, SEO, paid ads, branding, and web development for SMBs.",
+    description:
+      "Digital marketing, SEO, paid ads, branding, and web development for SMBs.",
     creator: "@marketspot",
     images: ["/logo.png"],
   },
