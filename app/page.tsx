@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { WhyTrustUs } from "@/components/why-trust-us";
 import { Team } from "@/components/team";
-import { Portfolio } from "@/components/portfolio";
 import { CTA } from "@/components/cta";
 import { FAQ, faqItems } from "@/components/faq";
 import { Footer } from "@/components/footer";
@@ -11,20 +10,23 @@ import { BackToTop } from "@/components/back-to-top";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Marketspot Agency | SEO, Paid Ads & Web Development",
+  title:
+    "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development",
   description:
-    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development.",
   keywords: [
+    "marketspot agency",
     "digital marketing agency",
-    "seo services",
+    "seo agency",
     "paid ads agency",
-    "web development",
+    "web development agency",
     "branding services",
   ],
   openGraph: {
-    title: "Marketspot Agency | SEO, Paid Ads & Web Development",
+    title:
+      "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development",
     description:
-      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development.",
     type: "website",
     url: "/",
     siteName: "Marketspot Agency",
@@ -39,9 +41,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketspot Agency | SEO, Paid Ads & Web Development",
+    title:
+      "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development",
     description:
-      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue through SEO, paid ads, branding, and web development.",
+      "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -63,10 +66,6 @@ export default function Home() {
     description:
       "Marketspot Agency helps SMBs grow with SEO, paid ads, branding, and web development.",
     email: "folaafolabi@marketspot.agency",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NG",
-    },
     sameAs: [
       "https://www.linkedin.com/company/marketspot",
       "https://twitter.com/marketspot",
@@ -75,15 +74,19 @@ export default function Home() {
 
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     name: "Marketspot Agency",
     image: "https://marketspot.agency/logo.png",
     description:
       "SEO, paid ads, branding, and web development services for small to mid-size businesses.",
     url: "https://marketspot.agency",
-    telephone: "contact us via email",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: "folaafolabi@marketspot.agency",
+    },
     priceRange: "$$",
-    areaServed: "KE",
+    areaServed: "Worldwide",
     service: [
       {
         "@type": "Service",
@@ -154,7 +157,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyTrustUs />
-      {/* Portfolio section - Hidden for now */}
+      {/* Portfolio intentionally hidden to simplify homepage and improve focus. */}
       {/* <Portfolio /> */}
       <Team />
       <FAQ />

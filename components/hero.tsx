@@ -39,7 +39,7 @@ export function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Digital marketing agency helping SMBs
+            Marketspot Agency is a digital marketing agency helping SMBs
             <span className="block text-[#E26128]">
               grow with SEO and paid ads
             </span>
