@@ -5,26 +5,32 @@ const footerSections = [
   {
     title: "Services",
     links: [
-      { label: "Paid Ads — Performance-Based", href: "#services" },
-      { label: "SEO — Monthly Retainer", href: "#services" },
-      { label: "Why Trust Us", href: "#why-trust-us" },
+      { label: "All Services", href: "/services" },
+      { label: "SEO Services", href: "/services" },
+      { label: "Paid Ads Management", href: "/services" },
+      { label: "Web Development", href: "/services" },
+      { label: "Branding & Strategy", href: "/services" },
     ],
   },
   {
     title: "Company",
     links: [
+      { label: "Blog & Resources", href: "/blog" },
       { label: "Meet the Team", href: "#team" },
       { label: "FAQ", href: "#faq" },
-      { label: "Our Work", href: "#portfolio" },
-      { label: "Contact Us", href: "#contact" },
+      {
+        label: "Contact Us",
+        href: "https://calendly.com/folaafolabi/consultation",
+      },
     ],
   },
   {
     title: "Learn More",
     links: [
-      { label: "How Paid Ads Work", href: "#services" },
-      { label: "Our SEO Process", href: "#services" },
-      { label: "Case Studies", href: "#portfolio" },
+      { label: "SEO Guide", href: "/blog" },
+      { label: "Paid Ads Strategy", href: "/blog" },
+      { label: "Web Design Tips", href: "/blog" },
+      { label: "Digital Marketing Articles", href: "/blog" },
     ],
   },
 ];

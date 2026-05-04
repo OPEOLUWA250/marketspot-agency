@@ -11,16 +11,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development",
+    "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development - Get Real Results",
   description:
-    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development.",
+    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development. Real digital growth. Real business results.",
   keywords: [
-    "marketspot agency",
     "digital marketing agency",
     "seo agency",
     "paid ads agency",
     "web development agency",
     "branding services",
+    "digital strategy",
+    "content marketing",
+    "marketspot agency",
+    "digital marketing services Global",
   ],
   openGraph: {
     title:

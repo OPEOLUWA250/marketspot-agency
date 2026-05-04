@@ -8,17 +8,22 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["600"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://marketspot.agency"),
   title: {
-    default: "Marketspot Agency | Digital Marketing, SEO & Web Development",
+    default:
+      "Marketspot Agency | Digital Marketing Agency - SEO, Paid Ads & Web Development",
     template: "%s | Marketspot Agency",
   },
   description:
-    "Marketspot Agency helps SMBs grow with SEO, paid ads, branding, and web development. We focus on measurable revenue, technical SEO, and conversion-driven content.",
+    "Marketspot Agency helps SMBs grow online with SEO, paid ads, web development, and branding. We focus on measurable revenue, technical SEO, and conversion-driven strategies. Get real digital growth with real business results.",
   keywords: [
     "digital marketing agency",
     "seo agency",
     "web development agency",
     "paid ads agency",
     "branding agency",
+    "digital marketing services",
+    "seo services",
+    "web design services",
+    "paid advertising management",
     "marketspot agency",
   ],
   generator: "Marketspot Agency",
@@ -37,26 +42,26 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Marketspot Agency | Digital Marketing, SEO & Web Development",
+    title: "Marketspot Agency | Digital Marketing Agency for Real Results",
     description:
-      "Digital marketing, SEO, paid ads, branding, and web development for SMBs that want measurable growth.",
+      "Full-service digital marketing agency. We help SMBs get found on Google with SEO, convert leads with paid ads, and build high-performing websites.",
     type: "website",
     locale: "en_US",
-    url: "/",
+    url: "https://marketspot.agency",
     siteName: "Marketspot Agency",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Marketspot Agency",
+        alt: "Marketspot Agency - Digital Marketing Services",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketspot Agency | Digital Marketing, SEO & Web Development",
+    title: "Marketspot Agency | Digital Marketing Services",
     description:
       "Digital marketing, SEO, paid ads, branding, and web development for SMBs.",
     creator: "@marketspot",
@@ -74,7 +79,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://marketspot.agency",
   },
   category: "Business",
 };
