@@ -4,11 +4,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**',
+        protocol: "https",
+        hostname: "**",
       },
     ],
     unoptimized: false,
@@ -21,43 +21,43 @@ const nextConfig = {
   headers: async () => {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
           {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin'
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
           },
           {
-            key: 'Permissions-Policy',
-            value: 'geolocation=(), microphone=(), camera=()'
-          }
+            key: "Permissions-Policy",
+            value: "geolocation=(), microphone=(), camera=()",
+          },
         ],
       },
-    ]
+    ];
   },
   // SEO sitemap and robots
   rewrites: async () => {
     return {
       beforeFiles: [
         {
-          source: '/sitemap.xml',
-          destination: '/.next/static/sitemap.xml',
+          source: "/sitemap.xml",
+          destination: "/.next/static/sitemap.xml",
         },
         {
-          source: '/robots.txt',
-          destination: '/.next/static/robots.txt',
+          source: "/robots.txt",
+          destination: "/.next/static/robots.txt",
         },
       ],
-    }
+    };
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

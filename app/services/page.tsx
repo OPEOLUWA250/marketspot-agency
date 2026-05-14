@@ -6,7 +6,8 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | SEO, Paid Ads & Web Development | Marketspot",
+  title:
+    "Digital Marketing Services | SEO, Paid Ads & Web Development | Marketspot",
   description:
     "Explore professional digital marketing services from Marketspot Agency. SEO services with ranking guarantees, performance-based paid ads management, web development, and branding for SMBs. Free consultation available.",
   keywords: [
@@ -112,12 +113,15 @@ export default function Services() {
                   <p className="text-sm font-semibold text-foreground mb-2">
                     Option 1: Standard Monthly
                   </p>
-                  <p className="text-3xl font-bold text-foreground">$399/month</p>
+                  <p className="text-3xl font-bold text-foreground">
+                    $399/month
+                  </p>
                   <p className="text-sm text-muted-foreground mt-2">
                     + $999 setup fee
                   </p>
                   <p className="text-xs text-accent font-semibold mt-3">
-                    ✓ Guarantee: If we don't get you to page one in 4 months, you don't pay until we do
+                    ✓ Guarantee: If we don't get you to page one in 4 months,
+                    you don't pay until we do
                   </p>
                 </div>
                 <div className="bg-accent/10 p-6 rounded-lg">

@@ -46,7 +46,8 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development Services",
+    title:
+      "Digital Marketing Agency | SEO, Paid Ads & Web Development Services",
     description:
       "Full-service digital marketing agency. We help SMBs get found on Google with SEO, convert leads with paid ads, build high-performing websites, and grow revenue with proven strategies.",
     type: "website",
