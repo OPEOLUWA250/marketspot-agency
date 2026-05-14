@@ -39,10 +39,8 @@ export function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Marketspot Agency is a digital marketing agency helping SMBs
-            <span className="block text-[#E26128]">
-              grow with SEO and paid ads
-            </span>
+            Marketspot Agency help Small to mid-size businesses get customers
+            <span className="block text-[#E26128]">with SEO & paid ads.</span>
           </h1>
 
           {/* Subheading */}
@@ -50,8 +48,8 @@ export function Hero() {
             className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-[#FFFFDE] leading-relaxed text-balance animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            We build search-first websites, conversion-focused content, and
-            performance campaigns that turn traffic into revenue.
+            Your potential customers are already searching for you but they only
+            find your competitors. We help you fix that.
           </p>
 
           {/* CTA Buttons */}

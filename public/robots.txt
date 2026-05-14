@@ -2,4 +2,16 @@ User-agent: *
 Allow: /
 Disallow: /.next/
 Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
 Sitemap: https://marketspot.agency/sitemap.xml

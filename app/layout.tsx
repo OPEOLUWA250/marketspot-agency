@@ -9,22 +9,26 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://marketspot.agency"),
   title: {
     default:
-      "Marketspot Agency | Digital Marketing Agency - SEO, Paid Ads & Web Development",
+      "Digital Marketing Agency for SMBs | SEO, Paid Ads & Web Development | Marketspot",
     template: "%s | Marketspot Agency",
   },
   description:
-    "Marketspot Agency helps SMBs grow online with SEO, paid ads, web development, and branding. We focus on measurable revenue, technical SEO, and conversion-driven strategies. Get real digital growth with real business results.",
+    "Professional digital marketing agency helping small and mid-size businesses rank on Google, generate leads, and grow revenue. Expert SEO, paid ads management, web development, and branding with proven results.",
   keywords: [
     "digital marketing agency",
     "seo agency",
-    "web development agency",
+    "professional seo services",
     "paid ads agency",
-    "branding agency",
-    "digital marketing services",
-    "seo services",
+    "web development agency",
     "web design services",
-    "paid advertising management",
-    "marketspot agency",
+    "digital marketing services",
+    "google ads management",
+    "content marketing",
+    "branding agency",
+    "digital strategy agency",
+    "conversion optimization",
+    "seo services for small business",
+    "seo services for startups",
   ],
   generator: "Marketspot Agency",
   icons: {
@@ -42,19 +46,19 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Marketspot Agency | Digital Marketing Agency for Real Results",
+    title: "Digital Marketing Agency | SEO, Paid Ads & Web Development Services",
     description:
-      "Full-service digital marketing agency. We help SMBs get found on Google with SEO, convert leads with paid ads, and build high-performing websites.",
+      "Full-service digital marketing agency. We help SMBs get found on Google with SEO, convert leads with paid ads, build high-performing websites, and grow revenue with proven strategies.",
     type: "website",
     locale: "en_US",
     url: "https://marketspot.agency",
     siteName: "Marketspot Agency",
     images: [
       {
-        url: "/logo.png",
+        url: "https://marketspot.agency/logo.png",
         width: 1200,
         height: 630,
-        alt: "Marketspot Agency - Digital Marketing Services",
+        alt: "Marketspot Agency - Digital Marketing Agency",
         type: "image/png",
       },
     ],
@@ -70,13 +74,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-snippet": -1,
       "max-image-preview": "large",
       "max-video-preview": -1,
     },
+  },
+  verification: {
+    google: "google-site-verification-code",
   },
   alternates: {
     canonical: "https://marketspot.agency",

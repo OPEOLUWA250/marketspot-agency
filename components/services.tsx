@@ -22,7 +22,7 @@ const services = [
     tagline:
       "We get you to the first page of Google when your customers are searching — and we keep you there.",
     description:
-      "$500 setup + $300/month — we audit your site, build your strategy, and fix the technical gaps. Then monthly, we handle everything ongoing — blog content, backlinks, on-page optimization, and website management.",
+      "Choose your pricing model. Option 1: $999 setup + $399/month with a guarantee — if we don't get you to page one after 4 months, you don't pay us until we do. Option 2: Pay $2,000 upfront for the first 4 months (no setup fee), then $399/month ongoing.",
     highlights: [
       "Keyword research",
       "SEO strategy",

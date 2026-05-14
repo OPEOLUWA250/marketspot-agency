@@ -9,20 +9,48 @@ export const metadata: Metadata = {
   title:
     "Digital Marketing Blog | SEO Tips, Strategies & Resources | Marketspot Agency",
   description:
-    "Learn digital marketing best practices, SEO strategies, paid ads tips, and web design insights. Expert guides to help your SMB grow online.",
+    "Expert digital marketing blog with actionable SEO strategies, paid ads tips, web development insights, and best practices to help SMBs grow online with proven tactics.",
   keywords: [
     "digital marketing blog",
-    "SEO tips",
+    "seo tips",
+    "seo strategies",
     "paid ads strategy",
-    "web development",
+    "google ads tips",
+    "web development guide",
     "marketing strategies",
+    "content marketing tips",
+    "small business marketing",
+    "online marketing guide",
   ],
   openGraph: {
+    title: "Digital Marketing Blog | SEO & Paid Ads Tips | Marketspot Agency",
+    description:
+      "Expert insights, strategies, and actionable guides for digital marketing, SEO rankings, paid ads performance, and online business growth.",
+    type: "website",
+    url: "https://marketspot.agency/blog",
+    siteName: "Marketspot Agency",
+    images: [
+      {
+        url: "https://marketspot.agency/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketspot Agency Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "Digital Marketing Blog | Marketspot Agency",
     description:
-      "Expert insights and strategies for digital marketing, SEO, and paid ads.",
-    type: "website",
-    url: "/blog",
+      "Expert digital marketing strategies, SEO tips, and paid ads insights for business growth.",
+    images: ["https://marketspot.agency/logo.png"],
+  },
+  alternates: {
+    canonical: "https://marketspot.agency/blog",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

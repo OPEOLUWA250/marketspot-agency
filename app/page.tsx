@@ -11,9 +11,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Marketspot Agency | Digital Marketing Agency for SEO, Paid Ads & Web Development - Get Real Results",
+    "Digital Marketing Agency for SMBs | SEO, Paid Ads & Web Development - Real Results | Marketspot",
   description:
-    "Marketspot Agency helps SMBs get found on Google, convert more leads, and grow revenue with SEO, paid ads, conversion-focused content, branding, and web development. Real digital growth. Real business results.",
+    "Marketspot Agency helps small and mid-size businesses get found on Google with SEO, convert more leads with paid ads, and grow revenue online. Professional digital marketing services with proven results. Free consultation available.",
   keywords: [
     "digital marketing agency",
     "seo agency",
@@ -21,9 +21,12 @@ export const metadata: Metadata = {
     "web development agency",
     "branding services",
     "digital strategy",
-    "content marketing",
-    "marketspot agency",
-    "digital marketing services Global",
+    "google ads management",
+    "seo services for smb",
+    "ppc management",
+    "digital marketing services",
+    "content marketing services",
+    "brand development agency",
   ],
   openGraph: {
     title:
@@ -67,12 +70,38 @@ export default function Home() {
     url: "https://marketspot.agency",
     logo: "https://marketspot.agency/logo.png",
     description:
-      "Marketspot Agency helps SMBs grow with SEO, paid ads, branding, and web development.",
+      "Professional digital marketing agency offering SEO, paid ads, web development, and branding services for small to mid-size businesses.",
     email: "folaafolabi@marketspot.agency",
+    phone: "+1-XXX-XXX-XXXX",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Global",
+      addressCountry: "US",
+    },
     sameAs: [
       "https://www.linkedin.com/company/marketspot",
       "https://twitter.com/marketspot",
     ],
+    foundingDate: "2024",
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Marketspot Agency",
+    image: "https://marketspot.agency/logo.png",
+    description:
+      "Digital marketing agency specializing in SEO, paid ads, and web development.",
+    url: "https://marketspot.agency",
+    telephone: "+1-XXX-XXX-XXXX",
+    email: "folaafolabi@marketspot.agency",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Global",
+      addressCountry: "US",
+    },
+    areaServed: "Worldwide",
+    priceRange: "$$",
   };
 
   const serviceSchema = {
@@ -81,33 +110,87 @@ export default function Home() {
     name: "Marketspot Agency",
     image: "https://marketspot.agency/logo.png",
     description:
-      "SEO, paid ads, branding, and web development services for small to mid-size businesses.",
+      "Digital marketing agency offering SEO, paid ads management, web development, and branding services.",
     url: "https://marketspot.agency",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
       email: "folaafolabi@marketspot.agency",
+      telephone: "+1-XXX-XXX-XXXX",
+      availableLanguage: "en",
     },
     priceRange: "$$",
-    areaServed: "Worldwide",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Worldwide",
+    },
     service: [
       {
         "@type": "Service",
-        name: "SEO",
+        name: "SEO Services",
         description:
-          "Technical SEO, on-page optimization, content strategy, and authority building to improve Google rankings.",
+          "Technical SEO, on-page optimization, content strategy, keyword research, and backlink building to improve Google rankings and organic traffic.",
+        url: "https://marketspot.agency/services",
+        provider: {
+          "@type": "Organization",
+          name: "Marketspot Agency",
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "USD",
+          lowPrice: "399",
+          highPrice: "2000",
+          offerCount: "2",
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Standard Monthly SEO",
+              price: "399",
+              priceCurrency: "USD",
+              description: "$999 setup + $399/month with guarantee",
+            },
+            {
+              "@type": "Offer",
+              name: "Upfront Commitment SEO",
+              price: "2000",
+              priceCurrency: "USD",
+              description: "$2000 upfront for 4 months, then $399/month",
+            },
+          ],
+        },
       },
       {
         "@type": "Service",
-        name: "Paid Ads",
+        name: "Paid Ads Management",
         description:
-          "Performance-based ad management focused on leads, customers, and measurable return on spend.",
+          "Performance-based Google Ads, Facebook, Instagram, and LinkedIn ad management focused on leads, customers, and measurable ROI.",
+        url: "https://marketspot.agency/services",
+        provider: {
+          "@type": "Organization",
+          name: "Marketspot Agency",
+        },
       },
       {
         "@type": "Service",
-        name: "Web Development",
+        name: "Web Development & Design",
         description:
-          "Conversion-focused websites and landing pages built to support SEO and paid traffic.",
+          "Conversion-focused website design and development built to support SEO and paid traffic with fast performance.",
+        url: "https://marketspot.agency/services",
+        provider: {
+          "@type": "Organization",
+          name: "Marketspot Agency",
+        },
+      },
+      {
+        "@type": "Service",
+        name: "Branding & Digital Strategy",
+        description:
+          "Brand strategy, visual identity design, brand guidelines, and digital marketing strategy for SMBs.",
+        url: "https://marketspot.agency/services",
+        provider: {
+          "@type": "Organization",
+          name: "Marketspot Agency",
+        },
       },
     ],
   };
@@ -138,11 +221,28 @@ export default function Home() {
     })),
   };
 
+  const creativeWorkSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: "Marketspot Agency Digital Marketing Services",
+    author: {
+      "@type": "Organization",
+      name: "Marketspot Agency",
+    },
+    about: "Digital marketing services for small and mid-size businesses",
+    keywords:
+      "SEO, paid ads, web development, digital marketing, branding, digital strategy",
+  };
+
   return (
     <main id="top" className="min-h-screen bg-background overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"
@@ -155,6 +255,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
       />
       <Header />
       <Hero />

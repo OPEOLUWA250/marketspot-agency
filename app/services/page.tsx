@@ -6,24 +6,44 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Digital Marketing Services | Marketspot Agency - SEO, Paid Ads & Web Development",
+  title: "Digital Marketing Services | SEO, Paid Ads & Web Development | Marketspot",
   description:
-    "Explore our full range of digital marketing services. From SEO and paid ads to web development and branding - we help SMBs grow online with measurable results.",
+    "Explore professional digital marketing services from Marketspot Agency. SEO services with ranking guarantees, performance-based paid ads management, web development, and branding for SMBs. Free consultation available.",
   keywords: [
     "digital marketing services",
-    "SEO services",
+    "seo services",
+    "professional seo",
     "paid ads management",
+    "google ads services",
     "web development services",
     "branding services",
-    "content marketing",
+    "web design services",
+    "digital strategy services",
+    "content marketing services",
+    "online marketing services",
   ],
   openGraph: {
-    title: "Digital Marketing Services | Marketspot Agency",
+    title: "Digital Marketing Services | SEO, Paid Ads & Web Development",
     description:
-      "Full-service digital marketing agency offering SEO, paid ads, web development, and branding for SMBs.",
+      "Professional digital marketing services including SEO with ranking guarantees, performance-based paid ads, high-converting web development, and strategic branding.",
     type: "website",
-    url: "/services",
+    url: "https://marketspot.agency/services",
+    siteName: "Marketspot Agency",
+    images: [
+      {
+        url: "https://marketspot.agency/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Marketspot Agency Services",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://marketspot.agency/services",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -87,14 +107,31 @@ export default function Services() {
                 </ul>
               </div>
 
-              <div className="bg-accent/10 p-6 rounded-lg">
-                <p className="text-sm text-muted-foreground mb-2">
-                  Starting at
-                </p>
-                <p className="text-3xl font-bold text-foreground">$300/month</p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  + $500 setup fee for audit and strategy
-                </p>
+              <div className="space-y-4">
+                <div className="bg-accent/10 p-6 rounded-lg">
+                  <p className="text-sm font-semibold text-foreground mb-2">
+                    Option 1: Standard Monthly
+                  </p>
+                  <p className="text-3xl font-bold text-foreground">$399/month</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    + $999 setup fee
+                  </p>
+                  <p className="text-xs text-accent font-semibold mt-3">
+                    ✓ Guarantee: If we don't get you to page one in 4 months, you don't pay until we do
+                  </p>
+                </div>
+                <div className="bg-accent/10 p-6 rounded-lg">
+                  <p className="text-sm font-semibold text-foreground mb-2">
+                    Option 2: Upfront Commitment
+                  </p>
+                  <p className="text-3xl font-bold text-foreground">$2,000</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    upfront for first 4 months, then $399/month
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    No setup fee • Best value for committed partners
+                  </p>
+                </div>
               </div>
 
               <Button className="w-full bg-accent hover:bg-accent/90" asChild>
