@@ -6,10 +6,10 @@ const footerSections = [
     title: "Services",
     links: [
       { label: "All Services", href: "/services" },
-      { label: "SEO Services", href: "/services" },
-      { label: "Paid Ads Management", href: "/services" },
-      { label: "Web Development", href: "/services" },
-      { label: "Branding & Strategy", href: "/services" },
+      { label: "Law Firm SEO", href: "/services" },
+      { label: "Attorney Paid Ads", href: "/services" },
+      { label: "Law Firm Websites", href: "/services" },
+      { label: "Legal Branding & Strategy", href: "/services" },
     ],
   },
   {
@@ -27,10 +27,10 @@ const footerSections = [
   {
     title: "Learn More",
     links: [
-      { label: "SEO Guide", href: "/blog" },
-      { label: "Paid Ads Strategy", href: "/blog" },
-      { label: "Web Design Tips", href: "/blog" },
-      { label: "Digital Marketing Articles", href: "/blog" },
+      { label: "Law Firm SEO Guide", href: "/blog" },
+      { label: "Attorney Ads Strategy", href: "/blog" },
+      { label: "Law Firm Website Tips", href: "/blog" },
+      { label: "Legal Marketing Articles", href: "/blog" },
     ],
   },
 ];
@@ -83,9 +83,9 @@ export function Footer() {
                 </div>
 
                 <p className="text-base text-background/75 leading-relaxed font-light max-w-sm">
-                  We help small to mid-size businesses grow with{" "}
+                  We help U.S. law firms grow with{" "}
                   <span className="font-semibold text-background">
-                    SEO, paid ads, branding, and web development.
+                    SEO, paid ads, legal branding, and website strategy.
                   </span>
                 </p>
 

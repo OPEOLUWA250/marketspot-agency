@@ -7,25 +7,25 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Digital Marketing Blog | SEO Tips, Strategies & Resources | Marketspot Agency",
+    "Law Firm SEO Blog | Attorney Marketing Tips & Strategies | Marketspot Agency",
   description:
-    "Expert digital marketing blog with actionable SEO strategies, paid ads tips, web development insights, and best practices to help SMBs grow online with proven tactics.",
+    "Expert law firm marketing blog with actionable SEO strategies, local search tips, paid ads insights, and website best practices to help U.S. attorneys grow online.",
   keywords: [
-    "digital marketing blog",
-    "seo tips",
-    "seo strategies",
-    "paid ads strategy",
-    "google ads tips",
-    "web development guide",
-    "marketing strategies",
-    "content marketing tips",
-    "small business marketing",
-    "online marketing guide",
+    "law firm seo blog",
+    "attorney marketing tips",
+    "law firm seo tips",
+    "local seo for attorneys",
+    "google ads for lawyers",
+    "law firm website tips",
+    "legal marketing strategies",
+    "legal content marketing",
+    "personal injury marketing",
+    "criminal defense seo",
   ],
   openGraph: {
-    title: "Digital Marketing Blog | SEO & Paid Ads Tips | Marketspot Agency",
+    title: "Law Firm SEO Blog | Attorney Marketing Tips | Marketspot Agency",
     description:
-      "Expert insights, strategies, and actionable guides for digital marketing, SEO rankings, paid ads performance, and online business growth.",
+      "Expert insights, strategies, and actionable guides for law firm SEO, attorney marketing, local search, and online growth.",
     type: "website",
     url: "https://marketspot.agency/blog",
     siteName: "Marketspot Agency",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Blog | Marketspot Agency",
+    title: "Law Firm SEO Blog | Marketspot Agency",
     description:
-      "Expert digital marketing strategies, SEO tips, and paid ads insights for business growth.",
+      "Law firm SEO strategies, attorney marketing tips, and local search insights for U.S. firms.",
     images: ["https://marketspot.agency/logo.png"],
   },
   alternates: {
@@ -57,10 +57,9 @@ export const metadata: Metadata = {
 const articles = [
   {
     id: 1,
-    title:
-      "How to Get Your Website Ranked on Google's First Page: Complete SEO Guide",
+    title: "How Law Firms Can Rank on Google's First Page: Complete SEO Guide",
     description:
-      "Learn the exact steps to improve your Google rankings. From technical SEO to content strategy, this guide covers everything you need to know.",
+      "Learn the exact steps to improve your Google rankings. From technical SEO to local content strategy, this guide covers what law firms need to know.",
     category: "SEO",
     readTime: "8 min read",
     date: "Coming Soon",
@@ -68,9 +67,9 @@ const articles = [
   },
   {
     id: 2,
-    title: "Google Ads Strategy for Small Businesses: Maximize ROI on Ad Spend",
+    title: "Google Ads Strategy for Law Firms: Maximize ROI on Ad Spend",
     description:
-      "Discover how to run profitable Google Ads campaigns without wasting money. Real strategies that work for SMBs with limited budgets.",
+      "Discover how to run profitable Google Ads campaigns without wasting money. Real strategies that work for attorneys and law firms.",
     category: "Paid Ads",
     readTime: "6 min read",
     date: "Coming Soon",
@@ -78,9 +77,10 @@ const articles = [
   },
   {
     id: 3,
-    title: "Why Your Website Isn't Converting: 10 Critical Elements to Fix",
+    title:
+      "Why Your Law Firm Website Isn't Converting: 10 Critical Elements to Fix",
     description:
-      "Your website might be getting traffic but not converting. Here are the top 10 things that kill conversions and how to fix them.",
+      "Your website might be getting traffic but not converting. Here are the top 10 issues that kill consultation requests and how to fix them.",
     category: "Web Design",
     readTime: "7 min read",
     date: "Coming Soon",
@@ -88,9 +88,9 @@ const articles = [
   },
   {
     id: 4,
-    title: "Local SEO for Small Businesses: Dominate Google Local Search",
+    title: "Local SEO for Law Firms: Dominate Google Local Search",
     description:
-      "Get found locally on Google Maps and local search results. This guide covers everything from Google Business Profile optimization to local citations.",
+      "Get found locally on Google Maps and local search results. This guide covers Google Business Profile optimization, citations, and attorney visibility.",
     category: "SEO",
     readTime: "7 min read",
     date: "Coming Soon",
@@ -99,9 +99,9 @@ const articles = [
   {
     id: 5,
     title:
-      "Content Marketing Strategy: How to Drive Traffic and Leads with Blogs",
+      "Content Marketing Strategy for Law Firms: How to Drive Traffic and Leads",
     description:
-      "Blog content is one of the most effective marketing tools. Learn how to create content that ranks, attracts, and converts your audience.",
+      "Blog content is one of the most effective marketing tools. Learn how to create legal content that ranks, attracts, and converts prospective clients.",
     category: "Content",
     readTime: "9 min read",
     date: "Coming Soon",
@@ -109,9 +109,9 @@ const articles = [
   },
   {
     id: 6,
-    title: "Branding Guide for Digital Agencies: Build a Memorable Brand",
+    title: "Branding Guide for Law Firms: Build a Memorable Legal Brand",
     description:
-      "A strong brand sets you apart from competition. Learn how to build a brand identity that resonates with your ideal clients.",
+      "A strong brand sets you apart from competition. Learn how to build a legal brand identity that resonates with your ideal clients.",
     category: "Branding",
     readTime: "8 min read",
     date: "Coming Soon",
@@ -129,12 +129,12 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-[#FFFFDE] mb-6">
-              Digital Marketing Resources & Tips
+              Law Firm SEO Resources & Tips
             </h1>
             <p className="text-lg text-[#FFFFDE]/90 mb-8">
               Expert insights, strategies, and actionable advice to help your
-              business grow online. Learn from our experience in SEO, paid ads,
-              web development, and digital strategy.
+              firm grow online. Learn from our experience in SEO, paid search,
+              website conversion, and legal marketing strategy.
             </p>
           </div>
         </div>
@@ -184,11 +184,11 @@ export default function Blog() {
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Get Digital Marketing Tips in Your Inbox
+            Get Law Firm Marketing Tips in Your Inbox
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Subscribe to our newsletter for weekly SEO tips, paid ads
-            strategies, and marketing insights tailored for SMBs.
+            strategies, and marketing insights tailored for U.S. law firms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
@@ -246,7 +246,7 @@ export default function Blog() {
             "@type": "CollectionPage",
             name: "Digital Marketing Blog",
             description:
-              "Expert digital marketing blog covering SEO, paid ads, web development, and marketing strategies for small businesses.",
+              "Expert law firm marketing blog covering SEO, paid ads, website conversion, and legal marketing strategies for U.S. attorneys.",
             url: "https://marketspot.agency/blog",
             publisher: {
               "@type": "Organization",

@@ -39,7 +39,7 @@ export function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-none text-[#FFFFDE] animate-fade-up"
             style={{ letterSpacing: "-0.05em", animationDelay: "0.12s" }}
           >
-            Marketspot Agency help Small to mid-size businesses get customers
+            We help U.S Law Firms generate leads with
             <span className="block text-[#E26128]">with SEO & paid ads.</span>
           </h1>
 

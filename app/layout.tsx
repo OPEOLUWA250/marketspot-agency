@@ -8,27 +8,26 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["600"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://marketspot.agency"),
   title: {
-    default:
-      "Digital Marketing Agency for SMBs | SEO, Paid Ads & Web Development | Marketspot",
+    default: "Law Firm SEO Agency for U.S. Attorneys | Marketspot",
     template: "%s | Marketspot Agency",
   },
   description:
-    "Professional digital marketing agency helping small and mid-size businesses rank on Google, generate leads, and grow revenue. Expert SEO, paid ads management, web development, and branding with proven results.",
+    "Marketspot helps U.S. law firms get found on Google with SEO, local search, paid ads, and conversion-focused websites that turn searches into consultations.",
   keywords: [
-    "digital marketing agency",
-    "seo agency",
-    "professional seo services",
-    "paid ads agency",
-    "web development agency",
-    "web design services",
-    "digital marketing services",
-    "google ads management",
-    "content marketing",
-    "branding agency",
-    "digital strategy agency",
+    "law firm seo agency",
+    "law firm seo services",
+    "attorney seo",
+    "u.s. law firm marketing",
+    "legal marketing agency",
+    "personal injury lawyer seo",
+    "divorce lawyer seo",
+    "criminal defense lawyer seo",
+    "local seo for law firms",
+    "google ads for lawyers",
+    "law firm website design",
+    "legal lead generation",
     "conversion optimization",
-    "seo services for small business",
-    "seo services for startups",
+    "law firm marketing services",
   ],
   generator: "Marketspot Agency",
   icons: {
@@ -47,9 +46,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Digital Marketing Agency | SEO, Paid Ads & Web Development Services",
+      "Law Firm SEO Agency | SEO, Local Search & Lead Generation for Attorneys",
     description:
-      "Full-service digital marketing agency. We help SMBs get found on Google with SEO, convert leads with paid ads, build high-performing websites, and grow revenue with proven strategies.",
+      "Full-service law firm marketing for U.S. attorneys. We help firms get found on Google with SEO, convert searches into consultations, and build websites that generate qualified leads.",
     type: "website",
     locale: "en_US",
     url: "https://marketspot.agency",
@@ -66,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketspot Agency | Digital Marketing Services",
+    title: "Marketspot Agency | Law Firm SEO Services",
     description:
-      "Digital marketing, SEO, paid ads, branding, and web development for SMBs.",
+      "Law firm SEO, local search, paid ads, and conversion-focused websites for U.S. attorneys.",
     creator: "@marketspot",
     images: ["/logo.png"],
   },

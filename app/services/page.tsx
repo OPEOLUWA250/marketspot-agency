@@ -7,26 +7,27 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Digital Marketing Services | SEO, Paid Ads & Web Development | Marketspot",
+    "Law Firm Marketing Services | SEO, Local Search & Lead Generation | Marketspot",
   description:
-    "Explore professional digital marketing services from Marketspot Agency. SEO services with ranking guarantees, performance-based paid ads management, web development, and branding for SMBs. Free consultation available.",
+    "Explore law firm marketing services from Marketspot Agency. SEO for attorneys, local search, paid ads, and website design built to generate consultations for U.S. law firms.",
   keywords: [
-    "digital marketing services",
-    "seo services",
-    "professional seo",
-    "paid ads management",
-    "google ads services",
-    "web development services",
-    "branding services",
-    "web design services",
-    "digital strategy services",
-    "content marketing services",
-    "online marketing services",
+    "law firm marketing services",
+    "law firm seo services",
+    "attorney seo services",
+    "local seo for law firms",
+    "google ads for lawyers",
+    "legal website design",
+    "legal lead generation",
+    "personal injury marketing",
+    "criminal defense marketing",
+    "divorce lawyer marketing",
+    "legal branding services",
+    "law firm digital strategy",
   ],
   openGraph: {
-    title: "Digital Marketing Services | SEO, Paid Ads & Web Development",
+    title: "Law Firm Marketing Services | SEO, Local Search & Lead Gen",
     description:
-      "Professional digital marketing services including SEO with ranking guarantees, performance-based paid ads, high-converting web development, and strategic branding.",
+      "Professional law firm marketing services including SEO for attorneys, local search, paid ads, high-converting websites, and strategic legal branding.",
     type: "website",
     url: "https://marketspot.agency/services",
     siteName: "Marketspot Agency",
@@ -58,11 +59,11 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-[#FFFFDE] mb-6">
-              Our Digital Marketing Services
+              Our Law Firm Marketing Services
             </h1>
             <p className="text-lg text-[#FFFFDE]/90 mb-8">
-              End-to-end solutions to help your business get found, convert more
-              leads, and grow revenue online.
+              End-to-end solutions to help U.S. law firms get found, convert
+              more consultations, and grow revenue online.
             </p>
           </div>
         </div>
@@ -76,13 +77,13 @@ export default function Services() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Search Engine Optimization (SEO)
+                  Search Engine Optimization for Law Firms
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Get discovered on Google when your customers are searching for
-                  your services. Our SEO strategy combines technical
-                  optimization, content marketing, and authority building to
-                  improve rankings and drive organic traffic.
+                  Get discovered on Google when potential clients are searching
+                  for legal help. Our SEO strategy combines technical
+                  optimization, legal content marketing, and authority building
+                  to improve rankings and drive qualified intake.
                 </p>
               </div>
 
@@ -92,11 +93,11 @@ export default function Services() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Comprehensive SEO audit and competitive analysis",
-                    "Keyword research and strategy development",
+                    "Comprehensive law firm SEO audit and competitive analysis",
+                    "Attorney keyword research and strategy development",
                     "Technical SEO fixes and site optimization",
-                    "Monthly blog content (2-4 posts)",
-                    "Backlink building and authority development",
+                    "Monthly legal content planning",
+                    "Local authority building and link acquisition",
                     "Monthly reporting and optimization",
                     "Ongoing rank tracking and adjustments",
                   ].map((item, i) => (
@@ -120,8 +121,8 @@ export default function Services() {
                     + $999 setup fee
                   </p>
                   <p className="text-xs text-accent font-semibold mt-3">
-                    ✓ Guarantee: If we don't get you to page one in 4 months,
-                    you don't pay until we do
+                    ✓ Guarantee: If we don&apos;t get you to page one in 4
+                    months, you don&apos;t pay until we do
                   </p>
                 </div>
                 <div className="bg-accent/10 p-6 rounded-lg">
@@ -144,7 +145,7 @@ export default function Services() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get SEO Consultation
+                  Get Law Firm SEO Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
@@ -154,13 +155,13 @@ export default function Services() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Paid Advertising Management
+                  Paid Advertising for Attorneys
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Get immediate results with performance-based paid ads. We
-                  manage Google Ads, Facebook/Instagram, and LinkedIn campaigns
-                  focused on generating leads, sales, and measurable ROI for
-                  your business.
+                  manage Google Ads and paid search campaigns focused on
+                  generating qualified legal leads, consultations, and
+                  measurable ROI for your firm.
                 </p>
               </div>
 
@@ -170,13 +171,13 @@ export default function Services() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Campaign strategy and audience targeting",
-                    "Ad creative design and copywriting",
-                    "Landing page optimization",
+                    "Campaign strategy and legal audience targeting",
+                    "Ad creative design and attorney copywriting",
+                    "Landing page optimization for consultations",
                     "Daily campaign monitoring and optimization",
                     "A/B testing and performance analysis",
                     "Monthly performance reports",
-                    "Lead and sales tracking setup",
+                    "Call and lead tracking setup",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-accent font-bold mt-1">✓</span>
@@ -194,7 +195,7 @@ export default function Services() {
                   Management Fee + Commission
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  You fund the ad account. We only charge management fee once
+                  You fund the ad account. We only charge a management fee once
                   results are proven.
                 </p>
               </div>
@@ -205,7 +206,7 @@ export default function Services() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Discuss Paid Ads Strategy
+                  Discuss Attorney Ads Strategy
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
@@ -218,12 +219,12 @@ export default function Services() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Web Development & Design
+                  Law Firm Website Design
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Conversion-focused websites built to support your SEO and paid
                   traffic. Fast, mobile-optimized, and designed to turn visitors
-                  into customers.
+                  into consultation requests.
                 </p>
               </div>
 
@@ -233,13 +234,13 @@ export default function Services() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Custom agency/business websites",
-                    "High-converting landing pages",
-                    "E-commerce sites with Shopify",
+                    "Custom law firm websites",
+                    "High-converting intake landing pages",
+                    "Attorney bio and practice area pages",
                     "Mobile-optimized designs",
                     "CMS integration for easy updates",
                     "SEO-optimized structure",
-                    "Fast performance (90+ Lighthouse score)",
+                    "Fast performance for search and users",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-accent font-bold mt-1">✓</span>
@@ -255,7 +256,7 @@ export default function Services() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get Website Quote
+                  Get Law Firm Website Quote
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
@@ -265,12 +266,13 @@ export default function Services() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Branding & Digital Strategy
+                  Legal Branding & Strategy
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Build a cohesive brand identity and digital strategy that
-                  resonates with your target audience. From logo design to
-                  content strategy, we help you stand out.
+                  Build a cohesive legal brand identity and digital strategy
+                  that resonates with your target clients. From positioning to
+                  content strategy, we help you stand out in competitive legal
+                  markets.
                 </p>
               </div>
 
@@ -283,8 +285,8 @@ export default function Services() {
                     "Brand strategy and positioning",
                     "Logo and visual identity design",
                     "Brand guidelines and style system",
-                    "Digital marketing strategy",
-                    "Social media content strategy",
+                    "Legal marketing strategy",
+                    "Content strategy for attorneys",
                     "Content calendar planning",
                     "Market research and competitor analysis",
                   ].map((item, i) => (
@@ -302,7 +304,7 @@ export default function Services() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Discuss Branding Strategy
+                  Discuss Legal Branding Strategy
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Button>
@@ -315,26 +317,27 @@ export default function Services() {
       <section className="py-20 md:py-32 bg-muted/30">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-12 text-center">
-            Frequently Asked Questions About Our Services
+            Frequently Asked Questions About Law Firm Marketing
           </h2>
 
           <div className="space-y-8">
             {[
               {
-                question: "How long does it take to see SEO results?",
+                question: "How long does it take to see law firm SEO results?",
                 answer:
-                  "SEO is a long-term strategy. Most clients see first improvements within 1-2 months, but significant ranking improvements typically take 3-6 months depending on competition and current site status. We'll provide monthly reports showing progress.",
-              },
-              {
-                question: "Do you guarantee first page Google rankings?",
-                answer:
-                  "We cannot guarantee rankings as Google's algorithm is complex and constantly changing. However, we use proven SEO best practices and focus on sustainable, white-hat techniques that deliver real results. Our transparent monthly reporting shows exactly what's working.",
+                  "SEO is a long-term strategy. Most law firms see first improvements within 1-2 months, but significant ranking gains typically take 3-6 months depending on competition, location, and current site status. We'll provide monthly reports showing progress.",
               },
               {
                 question:
-                  "Can you manage ads on other platforms besides Google?",
+                  "Do you guarantee first page Google rankings for attorneys?",
                 answer:
-                  "Yes! We manage campaigns on Google Ads, Facebook/Instagram, LinkedIn, and TikTok. We'll recommend which platforms make sense for your business and audience.",
+                  "We cannot guarantee rankings as Google's algorithm is complex and constantly changing. However, we use proven law firm SEO best practices and focus on sustainable, white-hat techniques that deliver real results. Our transparent monthly reporting shows exactly what's working.",
+              },
+              {
+                question:
+                  "Can you manage ads on platforms besides Google for law firms?",
+                answer:
+                  "Yes. We can manage Google Ads and other paid search campaigns where they make sense for your practice area and target market.",
               },
               {
                 question: "What happens if I want to pause or stop?",
@@ -342,9 +345,9 @@ export default function Services() {
                   "You can pause or cancel anytime without penalty. For SEO, we'll provide a full handoff of all content, reports, and strategy. For paid ads, the account remains yours to manage or transfer.",
               },
               {
-                question: "Do you offer custom packages?",
+                question: "Do you offer custom packages for law firms?",
                 answer:
-                  "Absolutely. Every business is different. We can create custom packages combining SEO, paid ads, web development, and branding. Contact us for a consultation.",
+                  "Absolutely. Every law firm is different. We can create custom packages combining SEO, paid ads, website design, and legal branding. Contact us for a consultation.",
               },
             ].map((faq, i) => (
               <div key={i} className="border-b pb-8">
@@ -364,11 +367,11 @@ export default function Services() {
       <section className="py-16 bg-accent text-accent-foreground">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Grow Your Business?
+            Ready to Grow Your Law Firm?
           </h2>
           <p className="text-lg mb-8 opacity-90">
             Schedule a free consultation to discuss which services are right for
-            you.
+            your practice.
           </p>
           <Button
             size="lg"
@@ -401,9 +404,9 @@ export default function Services() {
               {
                 "@type": "Service",
                 "@context": "https://schema.org",
-                name: "Search Engine Optimization (SEO)",
+                name: "Law Firm Search Engine Optimization (SEO)",
                 description:
-                  "Get discovered on Google with our comprehensive SEO strategy including technical optimization, content marketing, and authority building.",
+                  "Get discovered on Google with our law firm SEO strategy including technical optimization, legal content marketing, and authority building.",
                 provider: {
                   "@type": "Organization",
                   name: "Marketspot Agency",
@@ -413,9 +416,9 @@ export default function Services() {
               {
                 "@type": "Service",
                 "@context": "https://schema.org",
-                name: "Paid Advertising Management",
+                name: "Law Firm Paid Advertising Management",
                 description:
-                  "Performance-based paid ads on Google, Facebook, Instagram, and LinkedIn to generate leads and sales.",
+                  "Performance-based paid ads on Google and paid search platforms to generate qualified legal leads and consultations.",
                 provider: {
                   "@type": "Organization",
                   name: "Marketspot Agency",
@@ -425,9 +428,9 @@ export default function Services() {
               {
                 "@type": "Service",
                 "@context": "https://schema.org",
-                name: "Web Development & Design",
+                name: "Law Firm Website Design",
                 description:
-                  "Custom, conversion-focused websites built to support SEO and paid traffic. Fast, mobile-optimized, and designed to convert.",
+                  "Custom, conversion-focused law firm websites built to support SEO and paid traffic. Fast, mobile-optimized, and designed to convert.",
                 provider: {
                   "@type": "Organization",
                   name: "Marketspot Agency",
@@ -437,9 +440,9 @@ export default function Services() {
               {
                 "@type": "Service",
                 "@context": "https://schema.org",
-                name: "Branding & Digital Strategy",
+                name: "Legal Branding & Digital Strategy",
                 description:
-                  "Build a cohesive brand identity and digital strategy from logo design to content strategy.",
+                  "Build a cohesive legal brand identity and digital strategy from positioning to content strategy.",
                 provider: {
                   "@type": "Organization",
                   name: "Marketspot Agency",

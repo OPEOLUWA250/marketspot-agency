@@ -3,20 +3,6 @@ import { faFire, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const services = [
   {
-    icon: faFire,
-    title: "Paid Ads — Performance-Based",
-    tagline: "We run your ads. You fund the account. That's it.",
-    description:
-      "From creative and copy to strategy and optimization — we handle everything. You only pay a management fee once we've shown results, plus a commission on the leads and customers we generate for you.",
-    highlights: [
-      "Ad creatives",
-      "Campaign strategy",
-      "Audience targeting",
-      "Sales page copy",
-      "Full campaign management",
-    ],
-  },
-  {
     icon: faMagnifyingGlass,
     title: "SEO — Monthly Retainer",
     tagline:
@@ -36,76 +22,92 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 md:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="max-w-3xl mb-16 animate-fade-up">
-          <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-            What We Do
-          </span>
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Services that drive real results
-          </h2>
-        </div>
+    <section
+      id="services"
+      className="relative overflow-hidden bg-background py-20 md:py-32"
+    >
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-foreground/5 blur-3xl"></div>
+      </div>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => {
-            return (
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="max-w-2xl animate-fade-up">
+            <span className="mb-5 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium text-accent">
+              What We Do
+            </span>
+            <h2
+              className="text-balance text-3xl font-bold text-foreground sm:text-4xl md:text-5xl"
+              style={{ letterSpacing: "-0.03em" }}
+            >
+              SEO that puts you in front of ready-to-buy clients.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              We stripped this section down to the work that compounds: getting
+              your firm found when people are actively searching for help.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-border bg-card/60 p-5 shadow-sm backdrop-blur-sm">
+                <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+                  Focus
+                </p>
+                <p className="mt-2 text-base text-foreground">
+                  Ranking for the searches that turn into consultations.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-border bg-card/60 p-5 shadow-sm backdrop-blur-sm">
+                <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+                  Outcome
+                </p>
+                <p className="mt-2 text-base text-foreground">
+                  More visibility, more qualified leads, more revenue.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-8">
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative p-6 sm:p-7 md:p-10 rounded-2xl border border-border bg-background hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 active:shadow-lg active:border-accent/60 sm:hover:-translate-y-1 animate-fade-up card-interactive"
+                className="group relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-background via-background to-accent/5 p-7 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_70px_-28px_rgba(226,97,40,0.18)] animate-fade-up card-interactive sm:p-8 md:p-10"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
-                {/* Accent line on top */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-accent rounded-full group-hover:w-12 active:w-12 transition-all duration-300"></div>
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-accent/60 to-transparent"></div>
+                <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-accent/10 blur-3xl opacity-60 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 active:bg-accent/25 transition-all duration-300 group-hover:scale-110 active:scale-95">
-                  <FontAwesomeIcon
-                    icon={service.icon}
-                    className="w-6 h-6 text-accent"
-                  />
+                <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent ring-1 ring-accent/15 transition-transform duration-300 group-hover:scale-110">
+                    <FontAwesomeIcon icon={service.icon} className="h-6 w-6" />
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-accent">
+                      {service.title}
+                    </h3>
+                    <p className="mt-3 text-base font-medium text-accent/90">
+                      {service.tagline}
+                    </p>
+                    <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+                      {service.description}
+                    </p>
+
+                    <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
+                      {service.highlights.map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="min-h-10 rounded-full border border-border bg-background/80 px-2 py-2 text-center text-[11px] font-medium leading-tight text-foreground shadow-sm transition-colors duration-300 group-hover:border-accent/30 group-hover:bg-accent/5 sm:px-4 sm:text-sm"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent active:text-accent">
-                  {service.title}
-                </h3>
-
-                {/* Tagline */}
-                <p className="text-sm font-medium text-accent mb-4 transition-colors duration-300">
-                  {service.tagline}
-                </p>
-
-                {/* Description */}
-                <p className="text-muted-foreground mb-8 leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
-                  {service.description}
-                </p>
-
-                {/* What we do label */}
-                <p className="text-xs font-semibold text-foreground/60 uppercase tracking-wider mb-4">
-                  What we do:
-                </p>
-
-                {/* Highlights */}
-                <ul className="space-y-2">
-                  {service.highlights.map((highlight, i) => (
-                    <li
-                      key={i}
-                      className="text-sm text-foreground flex items-start gap-3 transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 transition-transform group-hover:scale-125 mt-1.5"></span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>

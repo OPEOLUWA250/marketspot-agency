@@ -7,29 +7,29 @@ import {
 
 export const faqItems = [
   {
-    question: "How long does SEO take to show results?",
+    question: "How long does law firm SEO take to show results?",
     answer:
-      "Most sites start seeing meaningful movement in 3 to 6 months, depending on competition, technical health, and how much content and authority the site already has.",
+      "Most law firms start seeing meaningful movement in 3 to 6 months, depending on competition, technical health, and how much local authority the site already has.",
   },
   {
-    question: "Do you work with businesses outside your local market?",
+    question: "Do you work with law firms outside your local market?",
     answer:
-      "Yes. We work remotely with SMBs in different markets and tailor the strategy to the audience, competition, and search intent in each location.",
+      "Yes. We work remotely with law firms in different markets and tailor the strategy to the audience, competition, and search intent in each location.",
   },
   {
     question: "What makes Marketspot different from a typical agency?",
     answer:
-      "We combine paid ads, SEO, creative, and web development in one team, and our paid ads work is structured around performance and revenue, not vanity metrics.",
+      "We combine paid ads, SEO, creative, and web development in one team, and our paid ads work is structured around consultations and revenue, not vanity metrics.",
   },
   {
     question: "Can you improve our website as part of SEO?",
     answer:
-      "Yes. We handle technical SEO, page speed, conversion-focused copy, landing page improvements, and the website fixes that help rankings and conversions.",
+      "Yes. We handle technical SEO, page speed, conversion-focused copy, landing page improvements, and the website fixes that help rankings and consultation conversions.",
   },
   {
     question: "How do we get started?",
     answer:
-      "Book a consultation or request a custom audit. We review the site, identify the highest-impact opportunities, and recommend the next steps.",
+      "Book a consultation or request a custom audit. We review the site, identify the highest-impact opportunities, and recommend the next steps for your firm.",
   },
 ] as const;
 
